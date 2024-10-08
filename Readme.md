@@ -2,6 +2,7 @@
 
 * Студент: [Мария Масич](https://up.htmlacademy.ru/adaptive-individual/2/user/418063).
 * Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
+* Сайт: [Личный проект «Кэт энерджи»](https://marimasich.github.io/418063-cat-energy-2/).
 
 ---
 

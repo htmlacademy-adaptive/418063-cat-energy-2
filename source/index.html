@@ -47,7 +47,16 @@
       <div class="container">
         <h1 class="intro__title">Функциональное питание для котов</h1>
         <p class="intro__slogan">Занялся собой? Займись котом!</p>
-        <img class="intro__image" src="#" width="999" height="999" alt="#">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="images/intro/intro-img-desktop@1x.webp 1x, images/intro/intro-img-desktop@2x.webp 2x" width="552" height="499">
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/intro/intro-img-tablet@1x.webp 1x, images/intro/intro-img-tablet@2x.webp 2x" width="709" height="609">
+          <source type="image/webp" media="(min-width: 320px)" srcset="images/intro/intro-img-mobile@1x.webp 1x, images/intro/intro-img-mobile@2x.webp 2x" width="280" height="270">
+          <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/intro/intro-img-desktop@1x.jpg 1x,
+            images/intro/intro-img-desktop@2x.jpg 2x" width="552" height="499">
+          <source type="image/jpeg" media="(min-width: 768px)" srcset="images/intro/intro-img-tablet@1x.jpg 1x,
+            images/intro/intro-img-tablet@2x.jpg 2x" width="709" height="609">
+          <img class="intro__image" src="images/intro/intro-img-mobile@1x.jpg" srcset="images/intro/intro-img-mobile@2x.jpg 2x" width="280" height="270" alt="Оранжевая банка корма для котов со вкусом курицы от Cat Energy. Объём 500грамм.">
+        </picture>
         <a class="intro__button button" href="#">Подобрать программу</a>
       </div>
     </section>

@@ -113,7 +113,27 @@
           <dd class="result__value">60 дней</dd>
         </dl>
         <!-- Блок со слайдером -->
-        <div class="result__preview"></div>
+        <!-- Резерв места -->
+        <div class="result__preview">
+          <!-- Кот "до" -->
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slider/before-desktop@1x.webp 1x, images/slider/before-desktop@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/slider/before-tablet@1x.webp 1x, images/slider/before-tablet@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" media="(min-width: 320px)" srcset="images/slider/before-mobile@1x.webp 1x, images/slider/before-mobile@2x.webp 2x" width="280" height="256">
+            <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/slider/before-desktop@1x.jpg 1x, images/slider/before-desktop@2x.jpg 2x" width="560" height="512">
+            <source type="image/jpeg" media="(min-width: 768px)" srcset="images/slider/before-tablet@1x.jpg 1x, images/slider/before-tablet@2x.jpg 2x" width="560" height="512">
+            <img class="result__image" src="images/slider/before-mobile@1x.jpg" srcset="images/slider/before-mobile@2x.jpg 2x" width="280" height="256" alt="Изображение упитанного кота до применения функционального питания">
+          </picture>
+          <!-- Кот "после" -->
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/slider/after-desktop@1x.webp 1x, images/slider/after-desktop@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/slider/after-tablet@1x.webp 1x, images/slider/after-tablet@2x.webp 2x" width="560" height="512">
+            <source type="image/webp" media="(min-width: 320px)" srcset="images/slider/after-mobile@1x.webp 1x, images/slider/after-mobile@2x.webp 2x" width="280" height="256">
+            <source type="image/jpeg" media="(min-width: 1440px)" srcset="images/slider/after-desktop@1x.jpg 1x, images/slider/after-desktop@2x.jpg 2x" width="560" height="512">
+            <source type="image/jpeg" media="(min-width: 768px)" srcset="images/slider/after-tablet@1x.jpg 1x, images/slider/after-tablet@2x.jpg 2x" width="560" height="512">
+            <img class="result__image" src="images/slider/after-mobile@1x.jpg" srcset="images/slider/after-mobile@2x.jpg 2x" width="280" height="256" alt="Изображение похудевшего кота после применения функционального питания">
+          </picture>
+        </div>
       </div>
     </section>
     <!-- Секция с контактными данными -->

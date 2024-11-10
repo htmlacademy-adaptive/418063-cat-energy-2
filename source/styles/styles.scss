@@ -1,7 +1,15 @@
-/* GLOBAL */
-@import "./common/variables.scss";
+// Styles.scss для личного проекта "Cat Energy"
+//---------------------------------------------
+
+/* Common */
 @import "./common/global.scss";
+@import "./common/variables.scss";
 @import "./common/fonts.scss";
 
-/* BLOCKS */
-@import "./blocks/header.scss";
+/* Blocks */
+//Элементы блоков "Главной страницы"
+@import "./blocks/page.scss";
+
+//Элементы блоков страницы "Каталог"
+
+//Элементы блоков страницы "Форма"

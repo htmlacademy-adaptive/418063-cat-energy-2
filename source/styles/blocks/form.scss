@@ -1,0 +1,24 @@
+// Стили для блока Form
+//---------------------
+
+.form {
+  padding: 0;
+  margin: 0;
+}
+
+.form__input {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 29px;
+  color: $base-text-content;
+  text-transform: uppercase;
+  border: 1px solid $border-base-darker;
+}
+
+.form__button {
+  font-size: 20px;
+  line-height: 26px;
+}

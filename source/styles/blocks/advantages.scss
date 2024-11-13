@@ -1,0 +1,51 @@
+// Стили для блока Advantages
+//---------------------------
+
+.advantages {
+  padding: 0 0 49px;
+  margin: 0;
+}
+
+.advantages__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $base-text;
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.advantages__item:last-child {
+  margin-bottom: 0;
+}
+
+.advantages__description {
+  display: block;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $bg-accent;
+  }
+}

@@ -1,2 +1,5 @@
 // Базовые шрифты для Проекта Cat Energy
 // --------------------------------------
+
+@include font-face("Lato", 400, normal, url("/../fonts/lato/Lato-Regular.woff2") format("woff2"));
+@include font-face("Oswald", 400, normal, url("/../fonts/oswald/Oswald-Regular.woff2") format("woff2"));

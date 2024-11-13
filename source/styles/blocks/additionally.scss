@@ -1,0 +1,99 @@
+// Стили для блока Additionally
+//-----------------------------
+
+.additionally {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.additionally__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 36px;
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $base-text;
+}
+
+.additionally__products {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.additionally__item {
+  padding: 20px 0;
+  margin: 0;
+  border-top: $border-base;
+  border-bottom: $border-base;
+}
+
+.additionally__link {
+  text-decoration: none;
+}
+
+.additionally__subtitle {
+  padding: 0;
+  margin: 0;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 16px;
+  color: $base-text-lighten;
+  text-transform: uppercase;
+}
+
+.additionally__quantityt {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.additionally__price {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.additionally__button {
+  display: block;
+  width: 100%;
+}
+
+.additionally__present {
+  position: relative;
+  display: block;
+  padding: 35px 0 0;
+  margin: 0;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 290px;
+    background-color: $bg-accent;
+    background-image: url("/../images/background/present-bg-mobile@1x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.additionally__present-text {
+  display: block;
+  position: relative;
+  width: 165px;
+  padding: 0;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  margin: 0 auto;
+  color: $secondary-text;
+  text-align: center;
+  z-index: 0;
+}

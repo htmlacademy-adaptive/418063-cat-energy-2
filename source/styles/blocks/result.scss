@@ -1,0 +1,61 @@
+// Стили для блока Result
+//-----------------------
+
+.result {
+  width: 100%;
+  padding: 25px 0 40px;
+  margin: 0;
+  background-color: $bg-special;
+}
+
+.result__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $base-text;
+}
+
+.result__description {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.result__table {
+  margin-bottom: 20px;
+}
+
+.result__criterion {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+}
+
+.result__value {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $base-text;
+  text-transform: uppercase;
+}
+
+.result__conclusion {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-text;
+  text-transform: uppercase;
+}
+
+.result__number {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-text;
+  text-transform: uppercase;
+}

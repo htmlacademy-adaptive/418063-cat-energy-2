@@ -1,0 +1,79 @@
+// Стили для блока Catalog
+//------------------------
+
+.catalog {
+  padding: 25px 0 35px;
+  margin: 0;
+}
+
+.catalog__title {
+  padding: 0;
+  margin: 0;
+  font-family: $secondary-font;
+  font-size: 32px; //Временно изменила размер шрифта с 36 на 32
+  line-height: 36px;
+  color: $base-text;
+}
+
+.catalog__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.catalog__item {
+  width: 100%;
+  padding: 20px 0 25px;
+  margin: 0;
+  border-top: $border-base;
+  border-bottom: $border-base;
+}
+
+.catalog__link {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.catalog__subtitle {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $base-text-lighten;
+  text-transform: uppercase;
+}
+
+.catalog__features-product {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.catalog__feature {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog__button {
+  display: block;
+  width: 100%;
+
+  &--to-all {
+    color: $base-text-content;
+    background-color: $btn-secondary;
+  }
+}
+
+.catalog__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 16px;
+}

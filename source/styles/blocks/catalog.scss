@@ -7,12 +7,9 @@
 }
 
 .catalog__title {
+  @include title;
   padding: 0;
   margin: 0;
-  font-family: $secondary-font;
-  font-size: 32px; //Временно изменила размер шрифта с 36 на 32
-  line-height: 36px;
-  color: $base-text;
 }
 
 .catalog__list {
@@ -37,14 +34,13 @@
 }
 
 .catalog__subtitle {
+  @include subtitle;
   padding: 0;
   margin: 0;
   margin-bottom: 14px;
-  font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
   color: $base-text-lighten;
-  text-transform: uppercase;
 }
 
 .catalog__features-product {
@@ -61,8 +57,9 @@
 }
 
 .catalog__button {
+  @include button;
   display: block;
-  width: 100%;
+  width: 280px;
 
   &--to-all {
     color: $base-text-content;

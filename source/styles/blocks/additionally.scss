@@ -8,14 +8,13 @@
   margin: 0;
 }
 
-.additionally__title {
+.additionally__heading {
+  @include heading;
   padding: 0;
   margin: 0;
   margin-bottom: 36px;
-  font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
-  color: $base-text;
 }
 
 .additionally__products {
@@ -36,13 +35,12 @@
 }
 
 .additionally__subtitle {
+  @include subtitle;
   padding: 0;
   margin: 0;
-  font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
   color: $base-text-lighten;
-  text-transform: uppercase;
 }
 
 .additionally__quantityt {
@@ -61,8 +59,9 @@
 }
 
 .additionally__button {
+  @include button;
   display: block;
-  width: 100%;
+  width: 280px;
 }
 
 .additionally__present {

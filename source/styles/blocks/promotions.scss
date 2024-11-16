@@ -6,14 +6,13 @@
   margin: 0;
 }
 
-.promotions__title {
+.promotions__heading {
+  @include heading;
   padding: 0;
   margin: 0;
   margin-bottom: 32px;
-  font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
-  color: $base-text;
 }
 
 .promotions__text {

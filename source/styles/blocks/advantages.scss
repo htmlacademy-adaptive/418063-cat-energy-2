@@ -6,14 +6,13 @@
   margin: 0;
 }
 
-.advantages__title {
+.advantages__heading {
+  @include heading;
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
-  font-family: $secondary-font;
   font-size: 36px;
   line-height: 40px;
-  color: $base-text;
 }
 
 .advantages__list {

@@ -8,14 +8,13 @@
   background-color: $bg-special;
 }
 
-.result__title {
+.result__heading {
+  @include heading;
   padding: 0;
   margin: 0;
   margin-bottom: 40px;
-  font-family: $secondary-font;
   font-size: 36px;
   line-height: 40px;
-  color: $base-text;
 }
 
 .result__description {

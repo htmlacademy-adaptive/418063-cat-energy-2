@@ -28,14 +28,12 @@
 }
 
 .programs__subtitle {
+  @include subtitle ;
   padding: 0;
   margin: 0;
   margin-bottom: 29px;
-  font-family: $secondary-font;
   font-size: 24px;
   line-height: 37px;
-  color: $base-text;
-  text-transform: uppercase;
 }
 
 .programs__description {

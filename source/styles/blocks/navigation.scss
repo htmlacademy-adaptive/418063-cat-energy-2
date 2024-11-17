@@ -1,23 +1,65 @@
 // Стили для блока Navigation
 //---------------------------
 .navigation {
+  position: relative;
+  display: grid;
+  grid-column: 1/ -1;
   width: 100%;
+
+  &--closed .navigation__toggle {
+    @include toggle;
+    top: -45px;
+    right: 1px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../icons/toggle-open.svg");
+  }
+
+  &--closed .navigation__list {
+    display: none; // Временное правило для работы с РР
+  }
+
+  &--opened .navigation__toggle {
+    @include toggle;
+    top: -44px;
+    right: -2px;
+    width: 21px;
+    height: 21px;
+    background-image: url("../../icons/toggle-close.svg");
+  }
+
+  &--nojs .navigation__toggle {
+    display: none;
+  }
 }
 
 .navigation__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
   margin: 0;
+  text-align: center;
   list-style: none;
 }
 
+.navigation__item {
+  display: block;
+  width: 100%;
+  border-top: 1px solid $border-base;
+
+  &:last-child {
+    border-bottom: 1px solid $border-base;
+  }
+}
+
 .navigation__link {
-  padding: 0;
+  display: block;
+  padding: 22px 0;
   margin: 0;
   font-family: $secondary-font;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 21px;
   color: $base-text;
   text-transform: uppercase;
   text-decoration: none;

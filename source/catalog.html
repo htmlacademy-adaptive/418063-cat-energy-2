@@ -18,33 +18,41 @@
     <!-- Шапка сайта -->
     <header class="page__header">
       <div class="container">
-        <!-- Логотип сайта -->
-        <a class="logo" href="index.html" aria-current="page">
-          <img class="logo__icon" src="#" width="999" height="999" alt="#">
-          <img class="logo__text" src="#" width="999" height="999" alt="#">
-        </a>
-        <!-- Навигация по сайту -->
-        <nav class="navigation">
-          <!-- Основные разделы сайта -->
-          <ul class="navigation__list">
-            <!-- Раздел сайта -->
-            <li class="navigation__item">
-              <a class="navigation__link" href="index.html">Главная</a>
-            </li>
-            <!-- Раздел сайта -->
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--current" href="#">Каталог продукции</a>
-            </li>
-            <!-- Раздел сайта -->
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- Бургер меню -->
-        <button class="toggle" type="button">
-          <span class="visually-hidden">Переключение меню</span>
-        </button>
+        <div class="page__header-wrapper">
+          <!-- Логотип сайта -->
+          <a class="page__header-logo logo" href="index.html" aria-current="page">
+            <picture>
+              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg" width="70" height="59">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="60" height="50">
+              <img class="logo__icon" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Векторное изображение котика в оранжевой маске и плаще супергероя">
+            </picture>
+          </a>
+          <a class="page__header-logo logo" href="index.html" aria-current="page">
+            <img class="logo__text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип с названием производителя в виде печатного текста Cat Energy">
+          </a>
+          <!-- Навигация по сайту -->
+          <nav class="navigation navigation--closed navigation--nojs">
+            <!-- Основные разделы сайта -->
+            <ul class="navigation__list">
+              <!-- Раздел сайта -->
+              <li class="navigation__item">
+                <a class="navigation__link" href="index.html">Главная</a>
+              </li>
+              <!-- Раздел сайта -->
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--current" href="catalog.html">Каталог продукции</a>
+              </li>
+              <!-- Раздел сайта -->
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Подбор программы</a>
+              </li>
+            </ul>
+            <!-- Бургер меню -->
+            <button class="navigation__toggle" type="button">
+              <span class="visually-hidden">Переключение меню</span>
+            </button>
+          </nav>
+        </div>
       </div>
     </header>
     <!-- Основное содержание страницы -->
@@ -317,30 +325,30 @@
       </section>
       <!-- Секция с контактными данными -->
       <section class="contacts">
+        <!-- Внутренний блок с контактными данными -->
         <div class="container">
-          <h2 class="visually-hidden">Контактная информация</h2>
-          <h3 class="contacts__subtitle">Приглашаем к сотрудничеству дилеров!</h3>
-          <address class="contacts__address">
-            <p class="contacts__address-text">
-              ул. Большая
-              Конюшенная, д. 19/8
-              Санкт-Петербург
-            </p>
-          </address>
+          <div class="contacts__wrapper">
+            <h2 class="visually-hidden">Контактная информация</h2>
+            <h3 class="contacts__subtitle">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+            <address class="contacts__address">
+              <p class="contacts__address-text">
+                ул. Большая
+                Конюшенная, д. 19/8
+                Санкт-Петербург
+              </p>
+            </address>
+          </div>
         </div>
         <!-- Блок с интерактивной картой -->
-        <div class="contacts__map map">
-          <img class="map__image" src="#" width="999" height="999" alt="#">
-        </div>
+        <div class="contacts__map"></div>
       </section>
     </main>
     <!-- Подвал сайта -->
     <footer class="page__footer">
       <div class="container">
         <!-- Логотип сайта -->
-        <a class="logo" href="index.html" aria-current="page">
-          <img class="logo__text" src="#" width="999" height="999" alt="#">
-          <!-- <span class="visually-hidden" lang="en">Логотип сайта Cat Energy</span> -->
+        <a class="page__footer-logo logo" href="index.html" aria-current="page">
+          <img class="logo__text" src="images/logo/logo-text.svg" width="128" height="24" alt="Логотип с названием производителя в виде печатного текста Cat Energy">
         </a>
         <!-- Список социальных сетей -->
         <ul class="social">

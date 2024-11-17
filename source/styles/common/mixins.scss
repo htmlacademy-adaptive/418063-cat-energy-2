@@ -11,6 +11,15 @@
   }
 }
 
+@mixin toggle {
+  position: absolute;
+  display: block;
+  background-color: $bg-base;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
 @mixin title {
   font-family: $secondary-font;
   font-size: 36px;

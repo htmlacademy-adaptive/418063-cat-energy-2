@@ -1,8 +1,8 @@
 // Переменные для Проекта Cat Energy
 // ---------------------------------
 
-// Сетка
-// -------
+// Размер вьюпорта
+// -----------------
 $table-width: 768px;
 $desktop-width: 1440px;
 
@@ -50,3 +50,7 @@ $border-input-hover: #cdcdcd;
 $border-input-active: #444444;
 $border-input-focus: #444444;
 $border-input-error: #ff8282;
+
+// Цвет иконок
+// ------------
+$icon-base: #666666;

@@ -4,54 +4,101 @@
 .programs {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 23px 0 0;
   margin: 0;
 }
 
 .programs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .programs__item {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 30px 20px 0;
+  padding: 30px 20px 22px;
   margin: 0;
-  margin-bottom: 20px;
   background-color: $bg-second;
-}
 
-.programs__item:last-child {
-  margin-bottom: 0;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 24px;
+    left: 21px;
+    width: 50px;
+    height: 50px;
+    background-color: $bg-accent;
+    border-radius: 50%;
+  }
+
+  &--slim::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 21px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../icons/programs/cat-slim.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--pro::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 21px;
+    left: 13px;
+    width: 67px;
+    height: 55px;
+    background-image: url("../../icons/programs/cat-pro.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .programs__subtitle {
   @include subtitle ;
+  max-width: 165px;
   padding: 0;
-  margin: 0;
-  margin-bottom: 29px;
+  margin: 0 0 29px 71px;
   font-size: 24px;
   line-height: 37px;
 }
 
 .programs__description {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 38px;
+  padding: 0 0 22px;
+  margin: 0 0 19px;
   font-size: 14px;
   line-height: 18px;
+  border-bottom: 1px solid $border-base-dark;
 }
 
 .programs__link {
+  display: flex;
+  gap: 15px;
   padding: 0;
   margin: 0;
-  margin-bottom: 29px;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
   color: $base-text;
   text-transform: uppercase;
   text-decoration: none;
+
+  &::after {
+    position: relative;
+    display: block;
+    content: "";
+    top: 2px;
+    width: 27px;
+    height: 12px;
+    background-image: url("../../icons/arrow-right.svg");
+    background-repeat: no-repeat;
+  }
 }

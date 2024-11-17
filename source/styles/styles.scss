@@ -11,6 +11,7 @@
 /* Blocks */
 //Элементы блоков "Главной страницы"
 @import "./blocks/page.scss";
+@import "./blocks/logo.scss";
 @import "./blocks/navigation.scss";
 @import "./blocks/intro.scss";
 @import "./blocks/container.scss";
@@ -22,3 +23,5 @@
 @import "./blocks/promotions.scss";
 @import "./blocks/form.scss";
 @import "./blocks/contacts.scss";
+@import "./blocks/social.scss";
+@import "./blocks/developer.scss";

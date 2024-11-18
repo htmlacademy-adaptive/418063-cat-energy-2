@@ -22,6 +22,9 @@ $base-text-light: #111111;
 $base-text-lighten: #222222;
 $base-text-content: #444444;
 
+$base-text-disabled: rgba(0, 0, 0, 0.3);
+$secondary-text-pressed:rgba(255, 255, 255, 0.6);
+
 // Цвет фона
 // -----------
 $bg-base: #ffffff;
@@ -33,10 +36,10 @@ $bg-accent: #68b738;
 // -------------
 $btn-base: #68b738;
 $btn-base-hover: #5eaa2f;
-$btn-base-active: #5eaa2f;
+$btn-base-pressed: #5eaa2f;
 $btn-secondary: #f2f2f2;
 $btn-secondary-hover: #ebebeb;
-$btn-secondary-active: #ebebeb;
+$btn-secondary-pressed: #ebebeb;
 $btn-disabled: #f2f2f2;
 
 // Цвет рамки
@@ -47,8 +50,7 @@ $border-base-darker: #cdcdcd;
 
 $border-input: #e7e7e7;
 $border-input-hover: #cdcdcd;
-$border-input-active: #444444;
-$border-input-focus: #444444;
+$border-input-pressed: #444444;
 $border-input-error: #ff8282;
 
 // Цвет иконок

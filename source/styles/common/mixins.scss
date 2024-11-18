@@ -50,7 +50,18 @@
   cursor: pointer;
 
   &:hover {
-    color: $secondary-text;
     background-color: $btn-base-hover;
+  }
+
+  &:active,
+  &:focus-visible {
+    color: $secondary-text-pressed;
+    background-color: $btn-base-pressed;
+  }
+
+  &:disabled {
+    color: $secondary-text-pressed;
+    background-color: $btn-disabled;
+    pointer-events: none;
   }
 }

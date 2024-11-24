@@ -1,0 +1,66 @@
+// Стили для блока Footer
+//-------------------------
+
+.footer {
+  background-color: $bg-second;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 280px;
+  padding: 22px 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 128px 1fr 163px;
+    gap: 121px;
+    width: 768px;
+    padding: 45px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 376px;
+    width: 1220px;
+    padding: 62px 0;
+  }
+}
+
+.footer__logo {
+  display: block;
+  margin: 0 auto;
+  padding: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 0;
+    margin: 0;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 0;
+  margin: 0;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.footer__developer {
+  width: 280px;
+  padding: 10px 0 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+    padding: 17px 0 0;
+  }
+}

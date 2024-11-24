@@ -12,3 +12,15 @@ body {
   color: $base-text-content;
   background-color: $bg-base;
 }
+
+.page__body {
+  picture {
+    display: contents;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

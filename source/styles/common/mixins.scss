@@ -11,57 +11,26 @@
   }
 }
 
-@mixin toggle {
-  position: absolute;
-  display: block;
-  background-color: $bg-base;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-}
-
 @mixin title {
   font-family: $secondary-font;
+  font-weight: $base-font-weight;
   font-size: 36px;
   line-height: 36px;
   color: $secondary-text;
+  box-sizing: border-box;
 }
 
 @mixin heading {
   font-family: $secondary-font;
+  font-weight: $base-font-weight;
   color: $base-text;
+  box-sizing: border-box;
 }
 
 @mixin subtitle {
   font-family: $secondary-font;
+  font-weight: $base-font-weight;
   color: $base-text;
   text-transform: uppercase;
-}
-
-@mixin button {
-  font-family: $secondary-font;
-  color: $secondary-text;
-  background-color: $btn-base;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: none;
   box-sizing: border-box;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $btn-base-hover;
-  }
-
-  &:active,
-  &:focus-visible {
-    color: $secondary-text-pressed;
-    background-color: $btn-base-pressed;
-  }
-
-  &:disabled {
-    color: $secondary-text-pressed;
-    background-color: $btn-disabled;
-    pointer-events: none;
-  }
 }

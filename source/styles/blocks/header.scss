@@ -1,0 +1,20 @@
+// Стили для блока Header
+//------------------------
+
+.header {
+  display: grid;
+  grid-template-columns: 33px 121px 1fr;
+  gap: 14px 46px;
+  padding: 13px 0 0;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 60px 101px 1fr;
+    gap: 0 13px;
+    padding: 26px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 70px 118px 1fr;
+    padding: 57px 0 0;
+  }
+}

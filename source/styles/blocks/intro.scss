@@ -2,12 +2,8 @@
 //----------------------
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
   width: 100%;
-  padding: 0;
-  margin: 0;
   background-color: $bg-base;
 
   &::before {
@@ -22,23 +18,77 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 85px;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: -116px;
+      right: 0;
+      content: "";
+      width: 720px;
+      height: 694px;
+      background-color: $bg-accent;
+      background-size: cover;
+      background-image: url("../../images/background/intro-bg-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-position: right;
+      z-index: 0;
+    }
+  }
+}
+
+.intro__wrapper {
+  position: relative;
+  padding: 27px 0 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 540px;
+    padding: 37px 0 0;
+  }
 }
 
 .intro__title {
   @include title;
   position: relative;
-  max-width: 250px;
-  padding: 27px 0 0;
+  max-width: 280px;
   margin: 0 auto;
   margin-bottom: 25px;
   text-align: center;
-  z-index: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 530px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    color: $base-text;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 575px;
+    padding: 72px 0 0;
+    margin: 0 0 40px 80px;
+  }
 }
 
 .intro__slogan {
   position: relative;
-  max-width: 250px;
-  padding: 0;
+  max-width: 280px;
   margin: 0 auto;
   margin-bottom: 29px;
   font-family: $secondary-font;
@@ -47,22 +97,54 @@
   color: $secondary-text;
   text-align: center;
   text-transform: uppercase;
-  z-index: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 530px;
+    margin-bottom: 21px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $base-text;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 575px;
+    margin: 0 0 23px 80px;
+  }
 }
 
 .intro__image {
   position: relative;
+  display: block;
   width: 280px;
   height: 270px;
-  z-index: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 50px;
+    left: 557px;
+    width: 552px;
+    height: 499px;
+  }
 }
 
 .intro__button {
-  @include button;
   display: block;
-  width: 280px;
-  padding: 7px 10px;
-  margin: 0;
-  font-size: 16px;
-  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 120px;
+    bottom: 526px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 182px;
+    left: 190px;
+  }
 }

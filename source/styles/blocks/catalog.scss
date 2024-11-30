@@ -2,78 +2,279 @@
 //------------------------
 
 .catalog {
-  padding: 25px 0 35px;
-  margin: 0;
-}
+  padding-top: 25px;
 
-.catalog__title {
-  padding: 0;
-  margin: 0;
-  font-family: $secondary-font;
-  font-size: 32px; //Временно изменила размер шрифта с 36 на 32
-  line-height: 36px;
-  color: $base-text;
-}
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
 
-.catalog__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.catalog__item {
-  width: 100%;
-  padding: 20px 0 25px;
-  margin: 0;
-  border-top: $border-base;
-  border-bottom: $border-base;
-}
-
-.catalog__link {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-}
-
-.catalog__subtitle {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 14px;
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 20px;
-  color: $base-text-lighten;
-  text-transform: uppercase;
-}
-
-.catalog__features-product {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 21px;
-}
-
-.catalog__feature {
-  padding: 0;
-  margin: 0;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.catalog__button {
-  display: block;
-  width: 100%;
-
-  &--to-all {
-    color: $base-text-content;
-    background-color: $btn-secondary;
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
   }
 }
 
-.catalog__text {
+.catalog__title {
+  @include title;
+  width: 280px;
+  padding: 0;
+  margin: 0 auto 40px;
+  color: $base-text;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto 60px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 720px;
+    padding: 0 30px;
+    margin: 0 80px 61px;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 21px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 60px;
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 41px 80px;
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.catalog__item {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid $border-base;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 320px;
+    padding: 13px 35px 15px;
+    background-image: linear-gradient($bg-base 20%, $bg-second 20%);
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding: 32px 37px 39px 34px;
+    background-image: linear-gradient($bg-base 20%, $bg-second 20%);
+  }
+}
+
+.catalog__item-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: flex-start;
+  width: 280px;
+  padding: 21px 0 24px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 168px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.catalog__link {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+
+  &--image {
+    display: grid;
+    grid-column: 1/ 2;
+    grid-row: 1/ 3;
+  }
+
+  &--title {
+    display: grid;
+    grid-column: 2/ -1;
+    grid-row: 1/ 2;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--image {
+      grid-column: 1/ 2;
+      grid-row: 1/ 2;
+      width: 200px;
+      height: 210px;
+      margin: 0 auto 22px;
+    }
+
+    &--title {
+      display: grid;
+      grid-column: 1/ -1;
+      grid-row: 2/ 3;
+      margin-bottom: 21px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--image {
+      width: 169px;
+      margin-bottom: 12px;
+    }
+
+    &--title {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.catalog__subtitle {
+  @include subtitle;
+  width: 99px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: $base-text-lighten;
+
+  @media (min-width: $tablet-width) {
+    width: 140px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.catalog__button {
+  grid-column: 1/ -1;
+  grid-row: 3/ 4;
+  display: grid;
+  width: 280px;
+  padding: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/ -1;
+    grid-row: 4/ 5;
+    width: 250px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+  }
+}
+
+.catalog__download-item {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid $border-base;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    justify-content: center;
+    width: 320px;
+    padding: 34px 35px 38px;
+    margin: 105px auto 0;
+    border: 2px solid $border-base-light;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding: 34px 35px 38px;
+  }
+}
+
+.catalog__download-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 280px;
+  background-size: 30px 30px;
+  background-image: url("../../icons/plus.svg");
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-end;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    width: 250px;
+    text-align: center;
+    background-size: 60px 60px;
+    background-position: 50% 5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+  }
+}
+
+.catalog__download-title {
+  position: relative;
+  width: 203px;
+  padding: 58px 15px 0;
+  margin: 0 auto;
+  margin-bottom: 9px;
+  font-family: $secondary-font;
+  font-weight: $base-font-weight;
+  font-size: 16px;
+  line-height: 20px;
+  color: $base-text-light;
+  text-transform: uppercase;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 175px;
+    padding: 101px 0 0;
+    margin: 0 auto;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 84px 0 0;
+  }
+}
+
+.catalog__download-text {
+  width: 219px;
+  padding: 0 15px;
+  margin: 0 auto 20px;
   font-size: 12px;
   line-height: 16px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

@@ -1,0 +1,63 @@
+// Стили для блока Social
+//-------------------------
+.social {
+  width: 280px;
+  list-style: none;
+  border-top: 1px solid $border-base-dark;
+  border-bottom: 1px solid $border-base-dark;
+
+  @media (min-width: $tablet-width) {
+    width: 176px;
+    margin: 0;
+    border: none;
+  }
+}
+
+.social__item {
+  display: block;
+}
+
+.social__link {
+  display: block;
+  min-width: 24px;
+  padding: 5px;
+
+  &::before {
+    display: flex;
+    align-items: center;
+    content: "";
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  &--vk::before {
+    width: 27px;
+    height: 17px;
+    mask-image: url("../../icons/social/vk-icon.svg");
+    background-color: $icon-base;
+  }
+
+  &--yt::before {
+    width: 24px;
+    height: 19px;
+    mask-image: url("../../icons/social/youtube-icon.svg");
+    background-color: $icon-base;
+  }
+
+  &--tg::before {
+    width: 20px;
+    height: 17px;
+    mask-image: url("../../icons/social/tg-icon.svg");
+    background-color: $icon-base;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-color: $icon-accent;
+  }
+
+  &:active::before {
+    background-color: $icon-accent;
+    opacity: 0.3;
+  }
+}

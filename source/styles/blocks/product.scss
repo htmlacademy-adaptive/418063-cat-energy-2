@@ -1,0 +1,49 @@
+// Стили для блока Product
+//-------------------------
+.product {
+  display: grid;
+  grid-column: 2/ -1;
+  grid-row: 2/ 3;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 140px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/ -1;
+    grid-row: 3/ 4;
+    gap: 6px 0;
+    width: 250px;
+    margin: 0 0 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 5px 0;
+    width: 169px;
+    margin: 0 0 35px;
+  }
+}
+
+.product__feature {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid $border-base;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 6px;
+  }
+}
+
+.product__value {
+  text-align: end;
+}

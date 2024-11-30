@@ -11,17 +11,5 @@
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-}
-
-.page__header {
-  padding: 0;
-  margin: 0 auto;
-}
-
-.page__container {
-  flex-grow: 1;
-}
-
-.page__footer {
-  background-color: $bg-second;
+  overflow: hidden;
 }

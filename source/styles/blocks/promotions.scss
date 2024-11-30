@@ -2,31 +2,79 @@
 //---------------------------
 
 .promotions {
-  padding: 40px 0;
-  margin: 0;
+  padding-top: 41px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 96px;
+    padding-bottom: 104px;
+  }
 }
 
-.promotions__title {
+.promotions__heading {
+  @include heading;
   padding: 0;
   margin: 0;
   margin-bottom: 32px;
-  font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
-  color: $base-text;
+
+  @media (min-width: $tablet-width) {
+    width: 282px;
+    padding: 0 40px;
+    margin-bottom: 67px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
+    padding: 0;
+    margin-bottom: 73px;
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .promotions__text {
+  width: 218px;
   padding: 0;
-  margin: 0;
-  margin-bottom: 24px;
+  margin: 0 auto 23px;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 24px;
   color: $base-text;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 650px;
+    padding: 0 30px;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 790px;
+  }
 }
 
 .promotions__form {
-  display: flex;
-  flex-direction: column;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 632px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+  }
 }

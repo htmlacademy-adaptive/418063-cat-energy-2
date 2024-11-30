@@ -1,0 +1,70 @@
+// Стили для блока Logo
+//-----------------------
+
+.logo {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+}
+
+.logo__icon {
+  display: block;
+  width: 33px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 59px;
+  }
+}
+
+.logo__text {
+  display: block;
+  width: 101px;
+  height: 18px;
+
+  .header__logo & {
+    padding: 10px;
+  }
+
+  .header__logo--secondary & {
+    padding: 13px 10px 10px;
+  }
+
+  .footer & {
+    width: 128px;
+    height: 24px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    .header__logo & {
+      padding: 16px 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}

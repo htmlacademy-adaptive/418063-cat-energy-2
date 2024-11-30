@@ -1,39 +1,206 @@
 // Стили для блока Navigation
 //---------------------------
+
 .navigation {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-column: 1/ -1;
   width: 100%;
+  min-height: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+
+  &--closed {
+    &::after {
+      bottom: -1px;
+      border-bottom: 1px solid $border-base;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  &--closed .navigation__list {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  &--opened {
+    &::after {
+      bottom: -2px;
+      border-bottom: 1px solid $border-base;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  &--nojs .navigation__list {
+    position: relative;
+  }
+
+  &--secondary {
+    &::after {
+      bottom: -1px;
+      border-bottom: 1px solid $border-base-dark;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: 0;
+    grid-column: 3 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+  }
 }
 
 .navigation__list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
+  position: absolute;
+  background-color: $bg-base;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
   margin: 0;
+  padding: 0;
+  text-align: center;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px 23px;
+    background-color: transparent;
+    z-index: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px 31px;
+    width: 610px;
+    z-index: 1;
+  }
+}
+
+.navigation__item {
+  display: block;
+  min-width: 280px;
+  border-top: 1px solid $border-base;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    min-width: 65px;
+    max-width: 175px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 65px;
+    max-width: 175px;
+    text-align: end;
+    margin: 0;
+  }
 }
 
 .navigation__link {
-  padding: 0;
-  margin: 0;
+  position: relative;
+  display: block;
+  padding: 22px 10px 23px;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
   color: $base-text;
   text-transform: uppercase;
   text-decoration: none;
+  box-sizing: border-box;
 
   &:hover {
-    color: $base-text;
-    opacity: 0.1;
+    color: $base-text-hover;
   }
 
-  &:active {
-    color: $base-text;
-    opacity: 0.6;
-  }
-
+  &:active,
   &:focus-visible {
-    color: $base-text;
-    opacity: 0.6;
+    color: $base-text-pressed;
+  }
+
+  &:disabled {
+    color: $text-disabled;
+    pointer-events: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 65px;
+    max-width: 175px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 5px;
+    border: none;
+
+    &--current::after {
+      position: absolute;
+      content: "";
+      bottom: -6px;
+      display: block;
+      width: calc(100% - 10px);
+      border-bottom: 2px solid $border-accent;
+      z-index: 1;
+    }
+
+    &::before {
+      border: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 65px;
+    max-width: 175px;
+    padding: 1px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &--current::after {
+      bottom: -7px;
+      border-bottom: 2px solid $border-secondary;
+    }
+  }
+}
+
+.navigation__list--primary li a {
+  @media (min-width: $desktop-width) {
+    color: $secondary-text;
   }
 }

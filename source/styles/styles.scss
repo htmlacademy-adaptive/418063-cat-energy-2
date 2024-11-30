@@ -11,15 +11,24 @@
 /* Blocks */
 //Элементы блоков "Главной страницы"
 @import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
 @import "./blocks/navigation.scss";
+@import "./blocks/toggle.scss";
+@import "./blocks/main.scss";
 @import "./blocks/intro.scss";
 @import "./blocks/container.scss";
 @import "./blocks/button.scss";
 @import "./blocks/programs.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/result.scss";
+@import "./blocks/slider.scss";
 @import "./blocks/catalog.scss";
+@import "./blocks/product.scss";
 @import "./blocks/additionally.scss";
 @import "./blocks/promotions.scss";
 @import "./blocks/form.scss";
 @import "./blocks/contacts.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/social.scss";
+@import "./blocks/developer.scss";

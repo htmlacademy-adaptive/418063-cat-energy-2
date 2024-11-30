@@ -1,0 +1,105 @@
+// Стили для блока Slider
+//-------------------------
+
+.slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  min-height: 256px;
+  object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+    width: 560px;
+    min-height: 512px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+}
+
+.slider__image {
+  display: grid;
+  grid-column: 1/ -1;
+  grid-row: 2/ -2;
+
+  @media (min-width: $tablet-width) {
+    width: 560;
+    height: 512px;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 4px;
+  height: 100%;
+  padding: 0;
+  background-color: $icon-base-light;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: $bg-base;
+    border: 2px solid $icon-base-light;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    mask-size: 24px 18px;
+    mask-position: 50%;
+    mask-repeat: no-repeat;
+    mask-image: url("../../icons/arrows.svg");
+    background-color: $icon-base-light;
+  }
+
+  &:hover {
+    background-color: $icon-accent;
+
+    &::before {
+      border-color: $icon-accent;
+    }
+
+    &::after {
+      background-color: $icon-accent;
+    }
+  }
+
+  &:active,
+  &:focus-visible {
+    background-color: $icon-accent-pressed;
+    border-color: $icon-accent-pressed;
+
+    &::before {
+      border-color: $icon-accent-pressed;
+    }
+
+    &::after {
+      background-color: $icon-accent-pressed;
+    }
+  }
+}

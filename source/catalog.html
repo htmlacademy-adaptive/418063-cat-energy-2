@@ -16,47 +16,53 @@
 <body class="page__body">
   <div class="page__wrapper">
     <!-- Шапка сайта -->
-    <header class="page__header">
-      <div class="container">
+    <header class="header">
+      <div class="header__wrapper">
         <!-- Логотип сайта -->
-        <a class="logo" href="index.html" aria-current="page">
-          <img class="logo__icon" src="#" width="999" height="999" alt="#">
-          <img class="logo__text" src="#" width="999" height="999" alt="#">
+        <a class="header__logo logo" href="index.html" aria-current="page">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg" width="70" height="59">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="60" height="50">
+            <img class="logo__icon" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Векторное изображение котика в оранжевой маске и плаще супергероя">
+          </picture>
+        </a>
+        <a class="header__logo header__logo--secondary logo " href="index.html" aria-current="page" tabindex="-1">
+          <img class="logo__text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип с названием производителя в виде печатного текста Cat Energy">
         </a>
         <!-- Навигация по сайту -->
-        <nav class="navigation">
+        <nav class="navigation navigation--closed navigation--js">
           <!-- Основные разделы сайта -->
           <ul class="navigation__list">
             <!-- Раздел сайта -->
             <li class="navigation__item">
-              <a class="navigation__link" href="index.html">Главная</a>
+              <a class="navigation__link" href="index.html" aria-current="page">Главная</a>
             </li>
             <!-- Раздел сайта -->
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--current" href="#">Каталог продукции</a>
+              <a class="navigation__link navigation__link--current" href="catalog.html" tabindex="-1">Каталог продукции</a>
             </li>
             <!-- Раздел сайта -->
             <li class="navigation__item">
               <a class="navigation__link" href="#">Подбор программы</a>
             </li>
           </ul>
+          <!-- Бургер меню -->
+          <button class="navigation__toggle toggle" type="button">
+            <span class="visually-hidden">Переключение меню</span>
+          </button>
         </nav>
-        <!-- Бургер меню -->
-        <button class="toggle" type="button">
-          <span class="visually-hidden">Переключение меню</span>
-        </button>
       </div>
     </header>
     <!-- Основное содержание страницы -->
-    <main class="page__catalog page__container">
+    <main class="main">
       <section class="catalog">
-        <div class="container">
-          <h1 class="catalog__title">Каталог продукции</h1>
-          <!-- Список продукции -->
-          <ul class="catalog__list">
-            <!-- "Элемент списка" -->
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">
+        <h1 class="catalog__title">Каталог продукции</h1>
+        <!-- Список продукции -->
+        <ul class="catalog__list">
+          <!-- "Элемент списка" -->
+          <li class="catalog__item">
+            <div class="catalog__item-inner">
+              <a class="catalog__link catalog__link--image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog/card-chicken500-desktop@1x.webp 1x, images/catalog/card-chicken500-desktop@2x.webp 2x" width="169" height="210">
                   <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog/card-chicken500-tablet@1x.webp 1x, images/catalog/card-chicken500-tablet@2x.webp 2x" width="200" height="210">
@@ -66,23 +72,25 @@
                   <img class="catalog__image" src="images/catalog/card-chicken500-mobile@1x.png" srcset="images/catalog/card-chicken500-mobile@2x.png 2x" width="140" height="107" alt="Банка функционального питания со вкусом курицы объёмом 500 грамм">
                 </picture>
               </a>
-              <a class="catalog__link" href="#">
+              <a class="catalog__link catalog__link--title" href="#" tabindex="-1">
                 <h3 class="catalog__subtitle">Cat Energy Pro 500&nbsp;г</h3>
               </a>
               <!-- Блок с характеристиками продукта -->
-              <dl class="catalog__features-product">
-                <dt class="catalog__feature catalog__feature--weight">Масса</dt>
-                <dd class="catalog__feature catalog__feature--value">500&nbsp;г</dd>
-                <dt class="catalog__feature catalog__feature--flavor">Вкус</dt>
-                <dd class="catalog__feature catalog__feature--value">Курица</dd>
-                <dt class="catalog__feature catalog__feature--price">Цена</dt>
-                <dd class="catalog__feature catalog__feature--value">700&nbsp;₽</dd>
+              <dl class="catalog__features product">
+                <dt class="product__feature product__name">Масса</dt>
+                <dd class="product__feature product__value">500&nbsp;г</dd>
+                <dt class="product__feature product__name">Вкус</dt>
+                <dd class="product__feature product__value">Курица</dd>
+                <dt class="product__feature product__name">Цена</dt>
+                <dd class="product__feature product__value">700&nbsp;₽</dd>
               </dl>
-              <a class="catalog__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">
+              <a class="catalog__button button button--base" href="#">Заказать</a>
+            </div>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="catalog__item">
+            <div class="catalog__item-inner">
+              <a class="catalog__link catalog__link--image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog/card-chicken1000-desktop@1x.webp 1x, images/catalog/card-chicken1000-desktop@2x.webp 2x" width="169" height="210">
                   <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog/card-chicken1000-tablet@1x.webp 1x, images/catalog/card-chicken1000-tablet@2x.webp 2x" width="200" height="210">
@@ -92,23 +100,25 @@
                   <img class="catalog__image" src="images/catalog/card-chicken1000-mobile@1x.png" srcset="images/catalog/card-chicken1000-mobile@2x.png 2x" width="140" height="107" alt="Банка функционального питания со вкусом курицы объёмом 1000 грамм">
                 </picture>
               </a>
-              <a class="catalog__link" href="#">
+              <a class="catalog__link catalog__link--title" href="#" tabindex="-1">
                 <h3 class="catalog__subtitle">Cat Energy Pro 1000&nbsp;г</h3>
               </a>
               <!-- Блок с характеристиками продукта -->
-              <dl class="catalog__features-product">
-                <dt class="catalog__feature catalog__feature--weight">Масса</dt>
-                <dd class="catalog__feature catalog__feature--value">1000&nbsp;г</dd>
-                <dt class="catalog__feature catalog__feature--flavor">Вкус</dt>
-                <dd class="catalog__feature catalog__feature--value">Курица</dd>
-                <dt class="catalog__feature catalog__feature--price">Цена</dt>
-                <dd class="catalog__feature catalog__feature--value">1000&nbsp;₽</dd>
+              <dl class="catalog__features product">
+                <dt class="product__feature product__name">Масса</dt>
+                <dd class="product__feature product__value">1000&nbsp;г</dd>
+                <dt class="product__feature product__name">Вкус</dt>
+                <dd class="product__feature product__value">Курица</dd>
+                <dt class="product__feature product__name">Цена</dt>
+                <dd class="product__feature product__value">1000&nbsp;₽</dd>
               </dl>
-              <a class="catalog__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">
+              <a class="catalog__button button button--base" href="#">Заказать</a>
+            </div>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="catalog__item">
+            <div class="catalog__item-inner">
+              <a class="catalog__link catalog__link--image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog/card-fish500-desktop@1x.webp 1x, images/catalog/card-fish500-desktop@2x.webp 2x" width="169" height="210">
                   <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog/card-fish500-tablet@1x.webp 1x, images/catalog/card-fish500-tablet@2x.webp 2x" width="200" height="210">
@@ -118,23 +128,25 @@
                   <img class="catalog__image" src="images/catalog/card-fish500-mobile@1x.png" srcset="images/catalog/card-fish500-mobile@2x.png 2x" width="140" height="107" alt="Банка функционального питания со вкусом рыбы объёмом 500 грамм">
                 </picture>
               </a>
-              <a class="catalog__link" href="#">
+              <a class="catalog__link catalog__link--title" href="#" tabindex="-1">
                 <h3 class="catalog__subtitle">Cat Energy Pro 500&nbsp;г</h3>
               </a>
               <!-- Блок с характеристиками продукта -->
-              <dl class="catalog__features-product">
-                <dt class="catalog__feature catalog__feature--weight">Масса</dt>
-                <dd class="catalog__feature catalog__feature--value">500&nbsp;г</dd>
-                <dt class="catalog__feature catalog__feature--flavor">Вкус</dt>
-                <dd class="catalog__feature catalog__feature--value">Рыба</dd>
-                <dt class="catalog__feature catalog__feature--price">Цена</dt>
-                <dd class="catalog__feature catalog__feature--value">700&nbsp;₽</dd>
+              <dl class="catalog__features product">
+                <dt class="product__feature product__name">Масса</dt>
+                <dd class="product__feature product__value">500&nbsp;г</dd>
+                <dt class="product__feature product__name">Вкус</dt>
+                <dd class="product__feature product__value">Рыба</dd>
+                <dt class="product__feature product__name">Цена</dt>
+                <dd class="product__feature product__value">700&nbsp;₽</dd>
               </dl>
-              <a class="catalog__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">
+              <a class="catalog__button button button--base" href="#">Заказать</a>
+            </div>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="catalog__item">
+            <div class="catalog__item-inner">
+              <a class="catalog__link catalog__link--image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog/card-fish1000-desktop@1x.webp 1x, images/catalog/card-fish1000-desktop@2x.webp 2x" width="169" height="210">
                   <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog/card-fish1000-tablet@1x.webp 1x, images/catalog/card-fish1000-tablet@2x.webp 2x" width="200" height="210">
@@ -144,23 +156,25 @@
                   <img class="catalog__image" src="images/catalog/card-fish1000-mobile@1x.png" srcset="images/catalog/card-fish1000-mobile@2x.png 2x" width="140" height="107" alt="Банка функционального питания со вкусом рыбы объёмом 1000 грамм">
                 </picture>
               </a>
-              <a class="catalog__link" href="#">
+              <a class="catalog__link catalog__link--title" href="#" tabindex="-1">
                 <h3 class="catalog__subtitle">Cat Energy Pro 1000&nbsp;г</h3>
               </a>
               <!-- Блок с характеристиками продукта -->
-              <dl class="catalog__features-product">
-                <dt class="catalog__feature catalog__feature--weight">Масса</dt>
-                <dd class="catalog__feature catalog__feature--value">1000&nbsp;г</dd>
-                <dt class="catalog__feature catalog__feature--flavor">Вкус</dt>
-                <dd class="catalog__feature catalog__feature--value">Рыба</dd>
-                <dt class="catalog__feature catalog__feature--price">Цена</dt>
-                <dd class="catalog__feature catalog__feature--value">1000&nbsp;₽</dd>
+              <dl class="catalog__features product">
+                <dt class="product__feature product__name">Масса</dt>
+                <dd class="product__feature product__value">1000&nbsp;г</dd>
+                <dt class="product__feature product__name">Вкус</dt>
+                <dd class="product__feature product__value">Рыба</dd>
+                <dt class="product__feature product__name">Цена</dt>
+                <dd class="product__feature product__value">1000&nbsp;₽</dd>
               </dl>
-              <a class="catalog__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">
+              <a class="catalog__button button button--base" href="#">Заказать</a>
+            </div>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="catalog__item">
+            <div class="catalog__item-inner">
+              <a class="catalog__link catalog__link--image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog/card-buckwheat500-desktop@1x.webp 1x, images/catalog/card-buckwheat500-desktop@2x.webp 2x" width="169" height="210">
                   <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog/card-buckwheat500-tablet@1x.webp 1x, images/catalog/card-buckwheat500-tablet@2x.webp 2x" width="200" height="210">
@@ -170,23 +184,25 @@
                   <img class="catalog__image" src="images/catalog/card-buckwheat500-mobile@1x.png" srcset="images/catalog/card-buckwheat500-mobile@2x.png 2x" width="140" height="107" alt="Банка функционального питания c гречкой объёмом 500 грамм">
                 </picture>
               </a>
-              <a class="catalog__link" href="#">
+              <a class="catalog__link catalog__link--title" href="#" tabindex="-1">
                 <h3 class="catalog__subtitle">Cat Energy Slim 500&nbsp;г</h3>
               </a>
               <!-- Блок с характеристиками продукта -->
-              <dl class="catalog__features-product">
-                <dt class="catalog__feature catalog__feature--weight">Масса</dt>
-                <dd class="catalog__feature catalog__feature--value">500&nbsp;г</dd>
-                <dt class="catalog__feature catalog__feature--flavor">Вкус</dt>
-                <dd class="catalog__feature catalog__feature--value">Гречка</dd>
-                <dt class="catalog__feature catalog__feature--price">Цена</dt>
-                <dd class="catalog__feature catalog__feature--value">400&nbsp;₽</dd>
+              <dl class="catalog__features product">
+                <dt class="product__feature product__name">Масса</dt>
+                <dd class="product__feature product__value">500&nbsp;г</dd>
+                <dt class="product__feature product__name">Вкус</dt>
+                <dd class="product__feature product__value">Гречка</dd>
+                <dt class="product__feature product__name">Цена</dt>
+                <dd class="product__feature product__value">400&nbsp;₽</dd>
               </dl>
-              <a class="catalog__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">
+              <a class="catalog__button button button--base" href="#">Заказать</a>
+            </div>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="catalog__item">
+            <div class="catalog__item-inner">
+              <a class="catalog__link catalog__link--image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog/card-buckwheat1000-desktop@1x.webp 1x, images/catalog/card-buckwheat1000-desktop@2x.webp 2x" width="169" height="210">
                   <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog/card-buckwheat1000-tablet@1x.webp 1x, images/catalog/card-buckwheat1000-tablet@2x.webp 2x" width="200" height="210">
@@ -196,23 +212,25 @@
                   <img class="catalog__image" src="images/catalog/card-buckwheat1000-mobile@1x.png" srcset="images/catalog/card-buckwheat1000-mobile@2x.png 2x" width="140" height="107" alt="Банка функционального питания c гречкой объёмом 1000 грамм">
                 </picture>
               </a>
-              <a class="catalog__link" href="#">
+              <a class="catalog__link catalog__link--title" href="#" tabindex="-1">
                 <h3 class="catalog__subtitle">Cat Energy Slim 1000&nbsp;г</h3>
               </a>
               <!-- Блок с характеристиками продукта -->
-              <dl class="catalog__features-product">
-                <dt class="catalog__feature catalog__feature--weight">Масса</dt>
-                <dd class="catalog__feature catalog__feature--value">1000&nbsp;г</dd>
-                <dt class="catalog__feature catalog__feature--flavor">Вкус</dt>
-                <dd class="catalog__feature catalog__feature--value">Гречка</dd>
-                <dt class="catalog__feature catalog__feature--price">Цена</dt>
-                <dd class="catalog__feature catalog__feature--value">700&nbsp;₽</dd>
+              <dl class="catalog__features product">
+                <dt class="product__feature product__name">Масса</dt>
+                <dd class="product__feature product__value">1000&nbsp;г</dd>
+                <dt class="product__feature product__name">Вкус</dt>
+                <dd class="product__feature product__value">Гречка</dd>
+                <dt class="product__feature product__name">Цена</dt>
+                <dd class="product__feature product__value">700&nbsp;₽</dd>
               </dl>
-              <a class="catalog__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">
+              <a class="catalog__button button button--base" href="#">Заказать</a>
+            </div>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="catalog__item">
+            <div class="catalog__item-inner">
+              <a class="catalog__link catalog__link--image" href="#">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="images/catalog/card-rice500-desktop@1x.webp 1x, images/catalog/card-rice500-desktop@2x.webp 2x" width="169" height="210">
                   <source type="image/webp" media="(min-width: 768px)" srcset="images/catalog/card-rice500-tablet@1x.webp 1x, images/catalog/card-rice500-tablet@2x.webp 2x" width="200" height="210">
@@ -222,128 +240,124 @@
                   <img class="catalog__image" src="images/catalog/card-rice500-mobile@1x.png" srcset="images/catalog/card-rice500-mobile@2x.png 2x" width="140" height="107" alt="Банка функционального питания c рисом объёмом 500 грамм">
                 </picture>
               </a>
-              <a class="catalog__link" href="#">
+              <a class="catalog__link catalog__link--title" href="#" tabindex="-1">
                 <h3 class="catalog__subtitle">Cat Energy Slim 500&nbsp;г</h3>
               </a>
               <!-- Блок с характеристиками продукта -->
-              <dl class="catalog__features-product">
-                <dt class="catalog__feature catalog__feature--weight">Масса</dt>
-                <dd class="catalog__feature catalog__feature--value">500&nbsp;г</dd>
-                <dt class="catalog__feature catalog__feature--flavor">Вкус</dt>
-                <dd class="catalog__feature catalog__feature--value">Рис</dd>
-                <dt class="catalog__feature catalog__feature--price">Цена</dt>
-                <dd class="catalog__feature catalog__feature--value">500&nbsp;₽</dd>
+              <dl class="catalog__features product">
+                <dt class="product__feature product__name">Масса</dt>
+                <dd class="product__feature product__value">500&nbsp;г</dd>
+                <dt class="product__feature product__name">Вкус</dt>
+                <dd class="product__feature product__value">Рис</dd>
+                <dt class="product__feature product__name">Цена</dt>
+                <dd class="product__feature product__value">500&nbsp;₽</dd>
               </dl>
-              <a class="catalog__button button" href="#">Заказать</a>
-            </li>
-            <li class="catalog__item catalog__item--download">
-              <h3 class="catalog__subtitle">Показать ещё 100500 товаров</h3>
-              <p class="catalog__text">На самом деле вкусов гораздо больше!</p>
-              <a class="catalog__button button catalog__button--to-all" href="#">Показать все</a>
-            </li>
-          </ul>
-        </div>
+              <a class="catalog__button button button--base" href="#">Заказать</a>
+            </div>
+          </li>
+          <li class="catalog__download-item">
+            <div class="catalog__download-inner">
+              <h3 class="catalog__download-title">Показать ещё 100500 товаров</h3>
+              <p class="catalog__download-text">На самом деле вкусов гораздо больше!</p>
+              <a class="catalog__button button button--secondary" href="#">Показать все</a>
+            </div>
+          </li>
+        </ul>
       </section>
       <!-- Секция с дополнительными товарами -->
-      <section class="additionally">
-        <div class="container">
-          <h2 class="additionally__title">Дополнительные товары</h2>
-          <!-- Список дополнительных товаров -->
-          <ul class="additionally__products">
-            <!-- "Элемент списка" -->
-            <li class="additionally__item">
-              <a class="additionally__link" href="#">
-                <h3 class="additionally__subtitle">Сахарозаменитель</h3>
-              </a>
-              <dl class="additionally__description">
-                <dt class="additionally__quantityt">1 упаковка (100 г)</dt>
-                <dd class="additionally__price">200&nbsp;₽</dd>
-              </dl>
-              <a class="additionally__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="additionally__item">
-              <a class="additionally__link" href="#">
-                <h3 class="additionally__subtitle">Питьевая вода</h3>
-              </a>
-              <dl class="additionally__description">
-                <dt class="additionally__quantityt">5 литров</dt>
-                <dd class="additionally__price">50&nbsp;₽</dd>
-              </dl>
-              <a class="additionally__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="additionally__item">
-              <a class="additionally__link" href="#">
-                <h3 class="additionally__subtitle">Молоко</h3>
-              </a>
-              <dl class="additionally__descriptiont">
-                <dt class="additionally__quantityt">1 литр</dt>
-                <dd class="additionally__price">100&nbsp;₽</dd>
-              </dl>
-              <a class="additionally__button button" href="#">Заказать</a>
-            </li>
-            <!-- "Элемент списка" -->
-            <li class="additionally__item">
-              <a class="additionally__link" href="#">
-                <h3 class="additionally__subtitle">Витамины</h3>
-              </a>
-              <dl class="additionally__descriptiont">
-                <dt class="additionally__quantityt">1 упаковка (30 г)</dt>
-                <dd class="additionally__price">300&nbsp;₽</dd>
-              </dl>
-              <a class="additionally__button button" href="#">Заказать</a>
-            </li>
-          </ul>
-        </div>
+      <section class="additionally container">
+        <h2 class="additionally__heading">Дополнительные товары</h2>
+        <!-- Список дополнительных товаров -->
+        <ul class="additionally__products">
+          <!-- "Элемент списка" -->
+          <li class="additionally__item">
+            <a class="additionally__link" href="#">
+              <h3 class="additionally__subtitle">Сахарозаменитель</h3>
+            </a>
+            <dl class="additionally__description">
+              <dt class="additionally__quantityt">1 упаковка (100 г)</dt>
+              <dd class="additionally__price">200&nbsp;₽</dd>
+            </dl>
+            <a class="additionally__button button button--base" href="#">Заказать</a>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="additionally__item">
+            <a class="additionally__link" href="#">
+              <h3 class="additionally__subtitle">Питьевая вода</h3>
+            </a>
+            <dl class="additionally__description">
+              <dt class="additionally__quantityt">5 литров</dt>
+              <dd class="additionally__price">50&nbsp;₽</dd>
+            </dl>
+            <a class="additionally__button button button--base" href="#">Заказать</a>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="additionally__item">
+            <a class="additionally__link" href="#">
+              <h3 class="additionally__subtitle">Молоко</h3>
+            </a>
+            <dl class="additionally__description">
+              <dt class="additionally__quantityt">1 литр</dt>
+              <dd class="additionally__price">100&nbsp;₽</dd>
+            </dl>
+            <a class="additionally__button button button--base" href="#">Заказать</a>
+          </li>
+          <!-- "Элемент списка" -->
+          <li class="additionally__item">
+            <a class="additionally__link" href="#">
+              <h3 class="additionally__subtitle">Витамины</h3>
+            </a>
+            <dl class="additionally__description">
+              <dt class="additionally__quantityt">1 упаковка (30 г)</dt>
+              <dd class="additionally__price">300&nbsp;₽</dd>
+            </dl>
+            <a class="additionally__button button button--base" href="#">Заказать</a>
+          </li>
+        </ul>
         <div class="additionally__present">
-          <p class="additionally__present-text">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="additionally__present-text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
         </div>
       </section>
       <!-- Секция с акциями и новинками -->
-      <section class="promotions">
-        <div class="container">
-          <h2 class="promotions__title">Акции и новинки</h2>
-          <p class="promotions__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-          <!-- Форма подписки на акции и новинки -->
-          <form class="promotions__form form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="form__label" for="email">
-              <span class="visually-hidden">Введите ваш e-mail:</span>
-            </label>
-            <input class="form__input" id="email" name="email" type="email" placeholder="кuklachev@gmail.com" required>
-            <button class="form__button button" type="submit">Подписаться</button>
-          </form>
-        </div>
+      <section class="promotions container">
+        <h2 class="promotions__heading">Акции и новинки</h2>
+        <p class="promotions__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+        <!-- Форма подписки на акции и новинки -->
+        <form class="promotions__form form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="form__label" for="email">
+            <span class="visually-hidden">Введите ваш e-mail:</span>
+          </label>
+          <input class="form__input" id="email" name="email" type="email" placeholder="кuklachev@gmail.com" required>
+          <button class="form__button button button--base" type="submit">Подписаться</button>
+        </form>
       </section>
       <!-- Секция с контактными данными -->
-      <section class="contacts">
-        <div class="container">
+      <section class="contacts contacts--secondary">
+        <!-- Внутренний блок с контактными данными -->
+        <div class="contacts__wrapper container">
           <h2 class="visually-hidden">Контактная информация</h2>
-          <h3 class="contacts__subtitle">Приглашаем к сотрудничеству дилеров!</h3>
+          <h3 class="contacts__subtitle">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
           <address class="contacts__address">
             <p class="contacts__address-text">
               ул. Большая
               Конюшенная, д. 19/8
-              Санкт-Петербург
+              <span class="contacts__address-sity">Санкт-Петербург</span>
             </p>
           </address>
         </div>
         <!-- Блок с интерактивной картой -->
-        <div class="contacts__map map">
-          <img class="map__image" src="#" width="999" height="999" alt="#">
-        </div>
+        <div class="contacts__map"></div>
       </section>
     </main>
     <!-- Подвал сайта -->
-    <footer class="page__footer">
-      <div class="container">
+    <footer class="footer">
+      <div class="footer__wrapper container">
         <!-- Логотип сайта -->
-        <a class="logo" href="index.html" aria-current="page">
-          <img class="logo__text" src="#" width="999" height="999" alt="#">
-          <!-- <span class="visually-hidden" lang="en">Логотип сайта Cat Energy</span> -->
+        <a class="footer__logo logo" href="index.html" aria-current="page">
+          <img class="logo__text" src="images/logo/logo-text.svg" width="128" height="24" alt="Логотип с названием производителя в виде печатного текста Cat Energy">
         </a>
         <!-- Список социальных сетей -->
-        <ul class="social">
+        <ul class="footer__social social">
           <!-- Мы Вконтакте -->
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
@@ -364,7 +378,7 @@
           </li>
         </ul>
         <!-- Блок с логотипом сайта разработчика -->
-        <a class="developer" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
   </div>

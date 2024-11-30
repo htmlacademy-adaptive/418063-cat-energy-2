@@ -6,10 +6,20 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  min-height: 256px;
+  object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+    width: 560px;
+    min-height: 512px;
+    margin: 0 auto;
+  }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/ -1;
-    grid-row: 1/ 4;
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
   }
 }
 
@@ -27,7 +37,7 @@
 .slider__button {
   position: absolute;
   top: 0;
-  left: 49%;
+  left: 50%;
   display: block;
   width: 4px;
   height: 100%;

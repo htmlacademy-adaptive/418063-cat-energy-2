@@ -1,78 +1,136 @@
 // Стили для блока Navigation
 //---------------------------
+
 .navigation {
-  position: relative;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  left: 0;
   display: grid;
   grid-column: 1/ -1;
+  width: 100%;
+  min-height: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+
+  &--closed {
+    &::after {
+      bottom: -1px;
+      border-bottom: 1px solid $border-base;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        border: none;
+      }
+    }
+  }
 
   &--closed .navigation__list {
     display: none;
 
     @media (min-width: $tablet-width) {
-      display: grid;
+      display: flex;
+    }
+  }
+
+  &--opened {
+    &::after {
+      bottom: -2px;
+      border-bottom: 1px solid $border-base;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  &--nojs .navigation__list {
+    position: relative;
+  }
+
+  &--secondary {
+    &::after {
+      bottom: -1px;
+      border-bottom: 1px solid $border-base-dark;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        border: none;
+      }
     }
   }
 
   @media (min-width: $tablet-width) {
-    grid-column: 3/ -1;
+    position: relative;
+    top: 0;
+    grid-column: 3 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
     justify-content: flex-end;
-    align-items: center;
   }
 }
 
 .navigation__list {
+  position: absolute;
+  background-color: $bg-base;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  max-width: 280px;
+  width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: min-content 1fr 1fr;
-    grid-template-rows: 1fr;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: center;
     gap: 10px 23px;
-    max-width: 528px;
+    background-color: transparent;
+    z-index: 0;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
-    grid-template-columns: min-content 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 10px 31px;
-    max-width: 622px;
+    width: 610px;
     z-index: 1;
   }
 }
 
 .navigation__item {
   display: block;
-  min-width: 320px;
-  margin-left: -20px;
+  min-width: 280px;
   border-top: 1px solid $border-base;
-
-  &:last-child {
-    border-bottom: 1px solid $border-base;
-  }
 
   @media (min-width: $tablet-width) {
     position: relative;
     min-width: 65px;
+    max-width: 175px;
     border: none;
-
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    text-align: end;
-    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
+    min-width: 65px;
+    max-width: 175px;
     text-align: end;
     margin: 0;
   }
@@ -81,8 +139,7 @@
 .navigation__link {
   position: relative;
   display: block;
-  min-width: 320px;
-  padding: 22px 10px;
+  padding: 22px 10px 23px;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
@@ -107,6 +164,7 @@
 
   @media (min-width: $tablet-width) {
     min-width: 65px;
+    max-width: 175px;
     font-size: 18px;
     line-height: 24px;
     padding: 5px;
@@ -115,22 +173,34 @@
     &--current::after {
       position: absolute;
       content: "";
-      bottom: -10px;
+      bottom: -6px;
       display: block;
       width: calc(100% - 10px);
       border-bottom: 2px solid $border-accent;
+      z-index: 1;
+    }
+
+    &::before {
+      border: none;
     }
   }
 
   @media (min-width: $desktop-width) {
+    min-width: 65px;
+    max-width: 175px;
     padding: 1px;
     font-size: 20px;
     line-height: 30px;
-    color: $secondary-text;
 
     &--current::after {
       bottom: -7px;
       border-bottom: 2px solid $border-secondary;
     }
+  }
+}
+
+.navigation__list--primary li a {
+  @media (min-width: $desktop-width) {
+    color: $secondary-text;
   }
 }

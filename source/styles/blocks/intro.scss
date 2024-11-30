@@ -12,37 +12,31 @@
     content: "";
     width: 100%;
     height: 302px;
-    background-color: $bg-accent;
-    background-size: cover;
-    background-image: url("../../images/background/intro-bg-mobile@1x.png");
+    background-size: contain, 100% 302px, contain;
+    background-image: url("../../images/background/intro-bg-mobile@1x.png"), linear-gradient(to right, #64a73c 14%, #62a53a 68%);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 0;
   }
 
   @media (min-width: $tablet-width) {
-    position: relative;
-
     &::before {
       display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 0 85px;
+    padding: 0 0 83px;
 
     &::before {
+      background-color: #68b738;
+      background-image: url("../../images/background/intro-bg-desktop@1x.png"), linear-gradient(#64a73c 14%, #62a53a 68%);
+      background-repeat: no-repeat;
+      background-size: 1040px 694px, contain;
+      width: 50%;
+      height: 694px;
       display: block;
       position: absolute;
-      top: -116px;
-      right: 0;
-      content: "";
-      width: 720px;
-      height: 694px;
-      background-color: $bg-accent;
-      background-size: cover;
-      background-image: url("../../images/background/intro-bg-desktop@1x.png");
-      background-repeat: no-repeat;
-      background-position: right;
+      inset: 0 0 0 50%;
       z-index: 0;
     }
   }
@@ -53,7 +47,7 @@
   padding: 27px 0 0;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 0 0;
+    padding: 60px 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -81,8 +75,8 @@
 
   @media (min-width: $desktop-width) {
     max-width: 575px;
-    padding: 72px 0 0;
-    margin: 0 0 40px 80px;
+    padding: 70px 0 0;
+    margin: 0 0 39px 80px;
   }
 }
 
@@ -126,7 +120,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    bottom: 50px;
+    bottom: 52px;
     left: 557px;
     width: 552px;
     height: 499px;
@@ -144,7 +138,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    bottom: 182px;
+    bottom: 185px;
     left: 190px;
   }
 }

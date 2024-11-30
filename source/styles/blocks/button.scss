@@ -32,6 +32,20 @@
     }
   }
 
+  &--secondary {
+    color: $base-text-content;
+    background-color: $btn-secondary;
+
+    &:hover {
+      background-color: $btn-secondary-hover;
+    }
+
+    &:active,
+    &:focus-visible {
+      background-color: $btn-secondary-pressed;
+    }
+  }
+
   &:disabled {
     color: $secondary-text-pressed;
     background-color: $btn-disabled;

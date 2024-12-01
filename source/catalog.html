@@ -17,41 +17,39 @@
   <div class="page__wrapper">
     <!-- Шапка сайта -->
     <header class="header">
-      <div class="header__wrapper">
+      <!-- Навигация по сайту -->
+      <nav class="header__navigation navigation navigation--secondary navigation--opened navigation--nojs">
         <!-- Логотип сайта -->
-        <a class="header__logo logo" href="index.html" aria-current="page">
+        <a class="header__logo logo logo--image" href="index.html" aria-current="page">
           <picture>
             <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo/logo-desktop.svg" width="70" height="59">
             <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/logo-tablet.svg" width="60" height="50">
             <img class="logo__icon" src="images/logo/logo-mobile.svg" width="33" height="38" alt="Векторное изображение котика в оранжевой маске и плаще супергероя">
           </picture>
         </a>
-        <a class="header__logo header__logo--secondary logo " href="index.html" aria-current="page" tabindex="-1">
+        <a class="header__logo logo logo--name" href="index.html" aria-current="page" tabindex="-1">
           <img class="logo__text" src="images/logo/logo-text.svg" width="101" height="18" alt="Логотип с названием производителя в виде печатного текста Cat Energy">
         </a>
-        <!-- Навигация по сайту -->
-        <nav class="navigation navigation--closed navigation--js">
-          <!-- Основные разделы сайта -->
-          <ul class="navigation__list">
-            <!-- Раздел сайта -->
-            <li class="navigation__item">
-              <a class="navigation__link" href="index.html" aria-current="page">Главная</a>
-            </li>
-            <!-- Раздел сайта -->
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--current" href="catalog.html" tabindex="-1">Каталог продукции</a>
-            </li>
-            <!-- Раздел сайта -->
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Подбор программы</a>
-            </li>
-          </ul>
-          <!-- Бургер меню -->
-          <button class="navigation__toggle toggle" type="button">
-            <span class="visually-hidden">Переключение меню</span>
-          </button>
-        </nav>
-      </div>
+        <!-- Бургер меню -->
+        <button class="navigation__toggle toggle" type="button">
+          <span class="visually-hidden">Переключение меню</span>
+        </button>
+        <!-- Основные разделы сайта -->
+        <ul class="navigation__list">
+          <!-- Раздел сайта -->
+          <li class="navigation__item">
+            <a class="navigation__link" href="index.html" aria-current="page">Главная</a>
+          </li>
+          <!-- Раздел сайта -->
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current" href="catalog.html" tabindex="-1">Каталог продукции</a>
+          </li>
+          <!-- Раздел сайта -->
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <!-- Основное содержание страницы -->
     <main class="main">

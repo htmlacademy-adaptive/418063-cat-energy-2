@@ -19,19 +19,6 @@
     margin-left: -20px;
   }
 
-  &--closed {
-    &::after {
-      bottom: -1px;
-      border-bottom: 1px solid $border-base;
-    }
-
-    @media (min-width: $tablet-width) {
-      &::after {
-        border: none;
-      }
-    }
-  }
-
   &--closed .navigation__list {
     display: none;
 
@@ -55,19 +42,6 @@
 
   &--nojs .navigation__list {
     position: relative;
-  }
-
-  &--secondary {
-    &::after {
-      bottom: -1px;
-      border-bottom: 1px solid $border-base-dark;
-    }
-
-    @media (min-width: $tablet-width) {
-      &::after {
-        border: none;
-      }
-    }
   }
 
   @media (min-width: $tablet-width) {

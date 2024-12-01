@@ -28,15 +28,16 @@
     padding: 0 0 83px;
 
     &::before {
-      background-color: #68b738;
-      background-image: url("../../images/background/intro-bg-desktop@1x.png"), linear-gradient(#64a73c 14%, #62a53a 68%);
+      background-color: $bg-image;
+      background-image: url("../../images/background/intro-bg-desktop@1x.png");
       background-repeat: no-repeat;
-      background-size: 1040px 694px, contain;
+      background-size: 1040px 694px;
       width: 50%;
       height: 694px;
       display: block;
       position: absolute;
       inset: 0 0 0 50%;
+      background-position: 0;
       z-index: 0;
     }
   }

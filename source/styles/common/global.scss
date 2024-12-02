@@ -14,7 +14,8 @@ body {
 }
 
 .page__body {
-  picture {
+  picture,
+  source {
     display: contents;
   }
 }

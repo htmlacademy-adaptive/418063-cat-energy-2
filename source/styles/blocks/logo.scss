@@ -2,7 +2,12 @@
 //-----------------------
 
 .logo {
+  margin-bottom: 8px;
   text-decoration: none;
+
+  .navigation--secondary & {
+    margin-bottom: 9px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -12,21 +17,35 @@
   &:focus-visible {
     opacity: 0.6;
   }
-}
 
-.logo__icon {
-  display: block;
-  width: 33px;
-  height: 38px;
+  &--image {
+    grid-column: 2/ 3;
+    grid-row: 1/ 2;
+    width: 33px;
 
-  @media (min-width: $tablet-width) {
-    width: 60px;
-    height: 50px;
+    @media (min-width: $tablet-width) {
+      grid-column: 1/ 2;
+      width: 60px;
+      height: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 70px;
+      height: 59px;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 70px;
-    height: 59px;
+  &--name {
+    grid-column: 3/ 4;
+    grid-row: 1/ 2;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 2/ 3;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
   }
 }
 
@@ -37,10 +56,6 @@
 
   .header__logo & {
     padding: 10px;
-  }
-
-  .header__logo--secondary & {
-    padding: 13px 10px 10px;
   }
 
   .footer & {
@@ -66,5 +81,9 @@
   @media (min-width: $desktop-width) {
     width: 118px;
     height: 21px;
+
+    .header__logo & {
+      padding: 18px 0;
+    }
   }
 }

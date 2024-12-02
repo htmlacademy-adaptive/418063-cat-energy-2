@@ -11,8 +11,8 @@
   cursor: pointer;
 
   .navigation--closed & {
-    top: -45px;
-    right: 21px;
+    top: 20px;
+    right: -80px;
     width: 24px;
     height: 24px;
     background-image: url("../../icons/toggle-open.svg");
@@ -23,8 +23,8 @@
   }
 
   .navigation--opened & {
-    top: -45px;
-    right: 18px;
+    top: 20px;
+    right: -82px;
     width: 21px;
     height: 21px;
     background-image: url("../../icons/toggle-close.svg");

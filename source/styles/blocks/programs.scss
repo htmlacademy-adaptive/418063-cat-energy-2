@@ -23,7 +23,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 80px;
   }
@@ -183,7 +182,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  max-width: 200px;
+  width: 200px;
   padding: 20px 21px;
   margin: 0;
   font-family: $secondary-font;
@@ -211,6 +210,7 @@
       width: 32px;
       height: 12px;
       mask-size: 32px 12px;
+      mask-image: url("../../icons/arrow-right-big.svg");
     }
   }
 
@@ -223,13 +223,14 @@
       width: 32px;
       height: 12px;
       mask-size: 32px 12px;
+      mask-image: url("../../icons/arrow-right-big.svg");
       background-color: $icon-base;
     }
   }
 
   @media (min-width: $tablet-width) {
     gap: 24px;
-    max-width: 195px;
+    width: 195px;
     padding: 15px 16px;
     margin-left: 37px;
     margin-bottom: 15px;

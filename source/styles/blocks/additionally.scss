@@ -16,7 +16,6 @@
     grid-template-columns: 895px 1fr;
     gap: 0 81px;
     width: 1220px;
-    padding-top: 73px;
   }
 }
 
@@ -118,13 +117,8 @@
     align-items: baseline;
     width: 708px;
     padding: 20px 37px 28px;
-    border-top: 1px solid $border-base;
     border-right: 1px solid $border-base;
     border-left: 1px solid $border-base;
-
-    &:last-child {
-      border-bottom: 1px solid $border-base;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -180,8 +174,6 @@
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 94px;
     grid-column: 2/ -1;
     grid-row: 1/ 2;
     width: 316px;
@@ -219,7 +211,6 @@
   text-align: end;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
     font-size: 16px;
     line-height: 20px;
   }
@@ -319,9 +310,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    text-align: center;
     width: 185px;
     margin: 0 auto;
     padding: 113px 0 10px;
+    text-align: center;
   }
 }

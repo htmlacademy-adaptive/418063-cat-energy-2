@@ -27,6 +27,7 @@
   display: grid;
   grid-column: 1/ -1;
   grid-row: 2/ -2;
+  object-fit: contain;
 
   @media (min-width: $tablet-width) {
     width: 560;

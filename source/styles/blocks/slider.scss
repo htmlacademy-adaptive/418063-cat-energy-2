@@ -2,19 +2,18 @@
 //-------------------------
 
 .slider {
+  --curtain-place: 0.5;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  min-height: 256px;
-  object-fit: contain;
+  grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
+  width: min(100%, 560px);
+  aspect-ratio: 280/256;
 
   @media (min-width: $tablet-width) {
-    grid-column: 1 / -1;
+    grid-column: 1/ -1;
     grid-row: 4 / -1;
     width: 560px;
-    min-height: 512px;
-    margin: 0 auto;
+    margin-inline: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,21 +23,34 @@
 }
 
 .slider__image {
-  display: grid;
-  grid-column: 1/ -1;
-  grid-row: 2/ -2;
-  object-fit: contain;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-  @media (min-width: $tablet-width) {
-    width: 560;
-    height: 512px;
+  &--after {
+    object-position: left;
   }
+
+  &--before {
+    object-position: right;
+  }
+}
+
+.slider__curtain {
+  display: grid;
+  place-items: center;
+  color: $icon-base-light;
+  background-color: $icon-base-light;
+  border-radius: 2px;
+  transition: color 0.2s, opacity 0.2s;
+  cursor: col-resize;
 }
 
 .slider__button {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 49%;
   display: block;
   width: 4px;
   height: 100%;
@@ -46,7 +58,8 @@
   background-color: $icon-base-light;
   border: none;
   border-radius: 2px;
-  cursor: pointer;
+  box-sizing: border-box;
+  cursor: col-resize;
 
   &::before {
     position: absolute;
@@ -102,5 +115,9 @@
     &::after {
       background-color: $icon-accent-pressed;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    left: 50%;
   }
 }

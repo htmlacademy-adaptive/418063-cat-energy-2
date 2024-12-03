@@ -49,7 +49,7 @@
     grid-template-columns: 60px 504px 1fr;
     gap: 0 23px;
     width: 1220px;
-    padding: 55px 0 4px;
+    padding: 56px 0 4px;
   }
 }
 
@@ -89,7 +89,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 10px 31px;
     width: 610px;
     z-index: 1;
   }
@@ -161,7 +160,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 1px;
     font-size: 20px;
     line-height: 30px;
   }

@@ -178,10 +178,10 @@
 }
 
 .programs__link {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
   width: 200px;
   padding: 20px 21px;
   margin: 0;
@@ -194,7 +194,8 @@
   box-sizing: border-box;
 
   &::after {
-    position: relative;
+    position: absolute;
+    right: 29px;
     display: block;
     content: "";
     width: 27px;
@@ -203,6 +204,7 @@
     mask-image: url("../../icons/arrow-right.svg");
     mask-repeat: no-repeat;
     background-color: $icon-base;
+    background-position: -8px;
   }
 
   &:hover {
@@ -217,7 +219,7 @@
   &:active,
   &:focus-visible {
     color: $base-text;
-    opacity: 0.3;
+    opacity: 0.4;
 
     &::after {
       width: 32px;
@@ -229,8 +231,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    gap: 24px;
-    width: 195px;
     padding: 15px 16px;
     margin-left: 37px;
     margin-bottom: 15px;

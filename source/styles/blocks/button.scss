@@ -1,0 +1,61 @@
+// Стили для блока Button
+//-------------------------
+
+.button {
+  display: block;
+  width: 280px;
+  padding: 13px 10px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $secondary-font;
+  font-weight: $base-font-weight;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &--base {
+    color: $secondary-text;
+    background-color: $btn-base;
+
+    &:hover {
+      background-color: $btn-base-hover;
+    }
+
+    &:active,
+    &:focus-visible {
+      color: $secondary-text-pressed;
+      background-color: $btn-base-pressed;
+    }
+  }
+
+  &--secondary {
+    color: $base-text-content;
+    background-color: $btn-secondary;
+
+    &:hover {
+      background-color: $btn-secondary-hover;
+    }
+
+    &:active,
+    &:focus-visible {
+      background-color: $btn-secondary-pressed;
+    }
+  }
+
+  &:disabled {
+    color: $secondary-text-pressed;
+    background-color: $btn-disabled;
+    pointer-events: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    padding: 14px 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

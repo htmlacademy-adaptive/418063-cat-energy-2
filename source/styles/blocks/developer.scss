@@ -1,0 +1,45 @@
+// Стили для блока Developer
+//---------------------------
+
+.developer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: $base-text-content;
+  text-decoration: none;
+  box-sizing: border-box;
+
+
+  &::after {
+    position: relative;
+    display: block;
+    content: "";
+    width: 27px;
+    height: 34px;
+    top: -5px;
+    mask-size: 27px 34px;
+    mask-image: url("../../icons/logo-developer.svg");
+    mask-repeat: no-repeat;
+    background-color: $icon-base-light;
+  }
+
+  &:active {
+    color: $base-text-pressed;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $icon-accent;
+  }
+
+  &:active::after {
+    background-color: $icon-accent;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    gap: 23px;
+    width: 164px;
+  }
+}

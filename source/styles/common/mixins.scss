@@ -1,0 +1,36 @@
+// Mixins для Проекта Cat Energy
+// ---------------------------------
+
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+@mixin title {
+  font-family: $secondary-font;
+  font-weight: $base-font-weight;
+  font-size: 36px;
+  line-height: 36px;
+  color: $secondary-text;
+  box-sizing: border-box;
+}
+
+@mixin heading {
+  font-family: $secondary-font;
+  font-weight: $base-font-weight;
+  color: $base-text;
+  box-sizing: border-box;
+}
+
+@mixin subtitle {
+  font-family: $secondary-font;
+  font-weight: $base-font-weight;
+  color: $base-text;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}

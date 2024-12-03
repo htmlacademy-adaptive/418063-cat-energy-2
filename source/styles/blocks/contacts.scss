@@ -1,0 +1,136 @@
+// Стили для блока Contacts
+//-------------------------
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  &--primary {
+    background-color: $bg-base;
+  }
+
+  &--secondary {
+    background-color: $bg-second;
+
+    .contacts__wrapper {
+      background-color: $bg-second;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto 565px 100px 565px auto;
+    grid-template-rows: 96px min-content 100px;
+  }
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  padding: 26px 0;
+  background-color: $bg-base;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 61px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/ 3;
+    grid-row: 2/ 3;
+    width: 565px;
+    padding: 59px 73px 59px 85px;
+    z-index: 1;
+
+    .contacts--secondary & {
+      background-color: $bg-base;
+    }
+  }
+}
+
+.contacts__subtitle {
+  @include subtitle;
+  display: block;
+  width: 130px;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: $base-text-light;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts__address-text {
+  display: block;
+  width: 140px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    width: 157px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.contacts__address-sity {
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 19px 0 0;
+  }
+}
+
+.contacts__map {
+  display: grid;
+  width: 100%;
+  height: 362px;
+  background-size: cover;
+  background-image: url("../../images/background/map-bg-mobile@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+    background-image: url("../../images/background/map-bg-tablet@1x.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 4;
+    background-image: url("../../images/background/map-bg-desktop@1x.png");
+  }
+}
+
+.contacts__map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

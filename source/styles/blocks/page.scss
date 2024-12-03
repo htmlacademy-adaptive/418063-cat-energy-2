@@ -1,0 +1,22 @@
+// Стили для блока Page
+//---------------------
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  picture,
+  source {
+    display: contents;
+  }
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}

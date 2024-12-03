@@ -1,0 +1,40 @@
+// Стили для блока Programs
+//-------------------------
+
+.toggle {
+  position: absolute;
+  display: block;
+  padding: 5px;
+  background-color: $bg-base;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+
+  .navigation--closed & {
+    top: 20px;
+    right: -80px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../icons/toggle-open.svg");
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  .navigation--opened & {
+    top: 20px;
+    right: -82px;
+    width: 21px;
+    height: 21px;
+    background-image: url("../../icons/toggle-close.svg");
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  .navigation--nojs & {
+    display: none;
+  }
+}

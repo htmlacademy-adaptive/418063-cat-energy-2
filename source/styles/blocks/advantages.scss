@@ -1,0 +1,142 @@
+// Стили для блока Advantages
+//---------------------------
+
+.advantages {
+  padding-top: 22px;
+  padding-bottom: 47px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 44px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 73px;
+    padding-bottom: 63px;
+  }
+}
+
+.advantages__heading {
+  @include heading;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 42px;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 74px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 94px 59px;
+    counter-reset: item;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 79px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  &::before {
+    position: relative;
+    top: -2px;
+    display: block;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $bg-accent;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--nutrients::before {
+    background-size: 25px 28px;
+    background-image: url("../../icons/advantages/nutrients-icon.svg");
+  }
+
+  &--powder::before {
+    background-size: 26px 28px;
+    background-image: url("../../icons/advantages/powder-icon.svg");
+  }
+
+  &--eating::before {
+    background-size: 25px 30px;
+    background-image: url("../../icons/advantages/eating-icon.svg");
+  }
+
+  &--time::before {
+    background-size: 26px 31px;
+    background-image: url("../../icons/advantages/time-icon.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    flex-flow: column wrap;
+    gap: 30px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -65px;
+      content: counter(item);
+      display: block;
+      font-family: $secondary-font;
+      font-size: 280px;
+      font-weight: $base-font-weight;
+      padding-top: 152px;
+      padding-left: 115px;
+      color: $bg-second;
+      counter-increment: item;
+      z-index: -1;
+    }
+  }
+}
+
+.advantages__description {
+  position: relative;
+  display: block;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 265px;
+    padding: 0 0 40px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 242px;
+  }
+}

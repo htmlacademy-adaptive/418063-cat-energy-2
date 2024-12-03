@@ -1,1 +1,75 @@
-/* здесь используйте глобальные переменные */
+// Переменные для Проекта Cat Energy
+// ---------------------------------
+
+// Размер вьюпорта
+// -----------------
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+
+// Шрифты проекта
+// ----------------
+$base-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
+
+$base-font-weight: 400;
+
+// Цвет шрифта
+// -------------
+$base-text: #000000;
+$secondary-text: #ffffff;
+$base-text-light: #111111;
+$base-text-lighten: #222222;
+$base-text-content: #444444;
+$accent-text: #68b738;
+
+$base-text-hover: rgba(0, 0, 0, 0.6);
+$base-text-pressed: rgba(0, 0, 0, 0.4);
+
+$secondary-text-hover:rgba(255, 255, 255, 0.6);
+$secondary-text-pressed:rgba(255, 255, 255, 0.4);
+
+$text-disabled: rgba(0, 0, 0, 0.2);
+
+// Цвет фона
+// -----------
+$bg-base: #ffffff;
+$bg-second: #f2f2f2;
+$bg-special: #eaeaea;
+$bg-accent: #68b738;
+
+$bg-image: #62a539;
+// Цвет кнопок
+// -------------
+$btn-base: #68b738;
+$btn-base-hover: #5eaa2f;
+$btn-base-pressed: #5eaa2f;
+
+$btn-secondary: #f2f2f2;
+$btn-secondary-hover: #ebebeb;
+$btn-secondary-pressed: #ebebeb;
+
+$btn-disabled: #f2f2f2;
+
+// Цвет рамки
+// ------------
+$border-accent: #68b738;
+$border-secondary: #ffffff;
+$border-base-light: #f2f2f2;
+$border-base: #e6e6e6;
+$border-base-dark: #d9d9d9;
+$border-base-darker: #cdcdcd;
+
+$border-input: #e7e7e7;
+$border-input-hover: #cdcdcd;
+$border-input-pressed: #444444;
+$border-input-error: #ff8282;
+
+// Цвет иконок
+// ------------
+$icon-base: #000000;
+$icon-base-light: #666666;
+$icon-accent: #68b738;
+
+$icon-accent-pressed: rgba(104, 183, 56, 0.6);

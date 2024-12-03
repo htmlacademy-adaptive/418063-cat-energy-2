@@ -1,0 +1,123 @@
+// Стили для блока Slider
+//-------------------------
+
+.slider {
+  --curtain-place: 0.5;
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
+  width: min(100%, 560px);
+  aspect-ratio: 280/256;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/ -1;
+    grid-row: 4 / -1;
+    width: 560px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+}
+
+.slider__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--after {
+    object-position: left;
+  }
+
+  &--before {
+    object-position: right;
+  }
+}
+
+.slider__curtain {
+  display: grid;
+  place-items: center;
+  color: $icon-base-light;
+  background-color: $icon-base-light;
+  border-radius: 2px;
+  transition: color 0.2s, opacity 0.2s;
+  cursor: col-resize;
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  left: 49%;
+  display: block;
+  width: 4px;
+  height: 100%;
+  padding: 0;
+  background-color: $icon-base-light;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: col-resize;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: $bg-base;
+    border: 2px solid $icon-base-light;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    mask-size: 24px 18px;
+    mask-position: 50%;
+    mask-repeat: no-repeat;
+    mask-image: url("../../icons/arrows.svg");
+    background-color: $icon-base-light;
+  }
+
+  &:hover {
+    background-color: $icon-accent;
+
+    &::before {
+      border-color: $icon-accent;
+    }
+
+    &::after {
+      background-color: $icon-accent;
+    }
+  }
+
+  &:active,
+  &:focus-visible {
+    background-color: $icon-accent-pressed;
+    border-color: $icon-accent-pressed;
+
+    &::before {
+      border-color: $icon-accent-pressed;
+    }
+
+    &::after {
+      background-color: $icon-accent-pressed;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    left: 50%;
+  }
+}

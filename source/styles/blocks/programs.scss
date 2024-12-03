@@ -195,7 +195,7 @@
 
   &::after {
     position: absolute;
-    right: 29px;
+    left: 145px;
     display: block;
     content: "";
     width: 27px;
@@ -204,7 +204,7 @@
     mask-image: url("../../icons/arrow-right.svg");
     mask-repeat: no-repeat;
     background-color: $icon-base;
-    background-position: -8px;
+    background-position-x: -8px;
   }
 
   &:hover {
@@ -213,6 +213,7 @@
       height: 12px;
       mask-size: 32px 12px;
       mask-image: url("../../icons/arrow-right-big.svg");
+      background-position-x: 50%;
     }
   }
 
@@ -227,6 +228,7 @@
       mask-size: 32px 12px;
       mask-image: url("../../icons/arrow-right-big.svg");
       background-color: $icon-base;
+      background-position-x: 50%;
     }
   }
 

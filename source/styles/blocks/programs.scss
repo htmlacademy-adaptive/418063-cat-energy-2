@@ -23,7 +23,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 80px;
   }
@@ -179,11 +178,11 @@
 }
 
 .programs__link {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
-  max-width: 200px;
+  width: 200px;
   padding: 20px 21px;
   margin: 0;
   font-family: $secondary-font;
@@ -195,7 +194,8 @@
   box-sizing: border-box;
 
   &::after {
-    position: relative;
+    position: absolute;
+    right: 29px;
     display: block;
     content: "";
     width: 27px;
@@ -204,6 +204,7 @@
     mask-image: url("../../icons/arrow-right.svg");
     mask-repeat: no-repeat;
     background-color: $icon-base;
+    background-position: -8px;
   }
 
   &:hover {
@@ -211,25 +212,25 @@
       width: 32px;
       height: 12px;
       mask-size: 32px 12px;
+      mask-image: url("../../icons/arrow-right-big.svg");
     }
   }
 
   &:active,
   &:focus-visible {
     color: $base-text;
-    opacity: 0.3;
+    opacity: 0.4;
 
     &::after {
       width: 32px;
       height: 12px;
       mask-size: 32px 12px;
+      mask-image: url("../../icons/arrow-right-big.svg");
       background-color: $icon-base;
     }
   }
 
   @media (min-width: $tablet-width) {
-    gap: 24px;
-    max-width: 195px;
     padding: 15px 16px;
     margin-left: 37px;
     margin-bottom: 15px;

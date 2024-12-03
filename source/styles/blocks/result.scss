@@ -7,8 +7,8 @@
   background-color: $bg-special;
 
   @media (min-width: $tablet-width) {
-    padding: 46px 0 115px;
-    background-image: linear-gradient($bg-base 58%, $bg-special 58%);
+    padding: 46px 0 99px;
+    background-image: linear-gradient($bg-base 57%, $bg-special 57%);
   }
 
   @media (min-width: $desktop-width) {
@@ -98,7 +98,7 @@
     grid-row: 3/ 4;
     gap: 0 44px;
     max-width: 367px;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -227,5 +227,5 @@
 
 .result__preview {
   display: block;
-  width: 280px;
+  width: 100%;
 }

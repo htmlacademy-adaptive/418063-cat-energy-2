@@ -5,20 +5,26 @@
   <meta charset="UTF-8">
   <title>Cat Energy. Функциональное питание для котов.</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles/styles.css">
+  <!-- preloader -->
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <!-- favicon -->
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/180.png"><!-- 180x180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <!-- styles -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- scripts -->
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
   <div class="page__wrapper">
     <!-- Шапка сайта -->
-    <header class="header">
+    <header class="header" data-test="header">
       <!-- Навигация по сайту -->
-      <nav class="header__navigation navigation navigation--opened navigation--nojs">
+      <nav class="header__navigation navigation navigation--closed navigation--nojs">
         <!-- Логотип сайта -->
         <a class="header__logo logo logo--image" href="index.html" aria-current="page">
           <picture>
@@ -54,7 +60,7 @@
     <!-- Основное содержание страницы -->
     <main class="main ">
       <!-- Секция с вступительной частью -->
-      <section class="intro">
+      <section class="intro" data-test="hero">
         <div class="intro__wrapper container">
           <h1 class="intro__title">Функциональное питание для котов</h1>
           <p class="intro__slogan">Занялся собой? Займись котом!</p>
@@ -72,7 +78,7 @@
         </div>
       </section>
       <!-- Секция с программами питания -->
-      <section class="programs container">
+      <section class="programs container" data-test="programs">
         <h2 class="visually-hidden">Основные программы питания</h2>
         <!-- Список программ питания -->
         <ul class="programs__list">
@@ -89,7 +95,7 @@
         </ul>
       </section>
       <!-- Секция с преимуществами функционального питания -->
-      <section class="advantages container">
+      <section class="advantages container" data-test="features">
         <h2 class="advantages__heading">Как это работает</h2>
         <!-- Преимущества функционального питания -->
         <ul class="advantages__list">
@@ -108,7 +114,7 @@
         </ul>
       </section>
       <!-- Секция с результатом программы -->
-      <section class="result">
+      <section class="result" data-test="proof">
         <div class="result__wrapper container">
           <h2 class="result__heading">Живой пример</h2>
           <p class="result__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
@@ -128,23 +134,25 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="images/slider/before-tablet-desktop@1x.webp 1x, images/slider/before-tablet-desktop@2x.webp 2x" width="560" height="512">
               <source type="image/webp" media="(min-width: 320px)" srcset="images/slider/before-mobile@1x.webp 1x, images/slider/before-mobile@2x.webp 2x" width="280" height="256">
               <source type="image/png" media="(min-width: 768px)" srcset="images/slider/before-tablet-desktop@1x.png 1x, images/slider/before-tablet-desktop@2x.png 2x" width="560" height="512">
-              <img class="slider__image" src="images/slider/before-mobile@1x.png" srcset="images/slider/before-mobile@2x.png 2x" width="280" height="256" alt="Изображение упитанного кота до применения функционального питания">
+              <img class="slider__image slider__image--after" src="images/slider/before-mobile@1x.png" srcset="images/slider/before-mobile@2x.png 2x" width="280" height="256" alt="Изображение упитанного кота до применения функционального питания">
             </picture>
+            <div class="slider__curtain">
+              <button class="slider__button" type="button">
+                <span class="visually-hidden">Передвинуть ползунок слайдера</span>
+              </button>
+            </div>
             <!-- Кот "после" -->
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="images/slider/after-tablet-desktop@1x.webp 1x, images/slider/after-tablet-desktop@2x.webp 2x" width="560" height="512">
               <source type="image/webp" media="(min-width: 320px)" srcset="images/slider/after-mobile@1x.webp 1x, images/slider/after-mobile@2x.webp 2x" width="280" height="256">
               <source type="image/png" media="(min-width: 768px)" srcset="images/slider/after-tablet-desktop@1x.png 1x, images/slider/after-tablet-desktop@2x.png 2x" width="560" height="512">
-              <img class="slider__image" src="images/slider/after-mobile@1x.png" srcset="images/slider/after-mobile@2x.png 2x" width="280" height="256" alt="Изображение похудевшего кота после применения функционального питания">
+              <img class="slider__image slider__image--before" src="images/slider/after-mobile@1x.png" srcset="images/slider/after-mobile@2x.png 2x" width="280" height="256" alt="Изображение похудевшего кота после применения функционального питания">
             </picture>
-            <button class="slider__button" type="button">
-              <span class="visually-hidden">Передвинуть ползунок слайдера</span>
-            </button>
           </div>
         </div>
       </section>
       <!-- Секция с контактными данными -->
-      <section class="contacts contacts--primary">
+      <section class="contacts contacts--primary" data-test="contacts">
         <!-- Внутренний блок с контактными данными -->
         <div class="contacts__wrapper container">
           <h2 class="visually-hidden">Контактная информация</h2>
@@ -165,7 +173,7 @@
       </section>
     </main>
     <!-- Подвал сайта -->
-    <footer class="footer">
+    <footer class="footer" data-test="footer">
       <div class="footer__wrapper container">
         <!-- Логотип сайта -->
         <a class="footer__logo logo" href="index.html" aria-current="page">

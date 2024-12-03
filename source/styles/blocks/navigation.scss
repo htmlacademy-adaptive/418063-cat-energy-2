@@ -37,11 +37,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 60px 101px 521px;
+    grid-template-columns: 60px 101px 517px;
     align-items: center;
     gap: 0 13px;
     width: 768px;
-    padding: 25px 30px 5px;
+    padding: 26px 30px 5px;
     margin: 0 auto;
   }
 
@@ -49,7 +49,7 @@
     grid-template-columns: 60px 504px 1fr;
     gap: 0 23px;
     width: 1220px;
-    padding: 55px 0 4px;
+    padding: 56px 0 4px;
   }
 }
 
@@ -79,8 +79,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;
-    gap: 10px 23px;
+    gap: 10px 34px;
     background-color: transparent;
     z-index: 0;
   }
@@ -90,9 +89,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 10px 31px;
     width: 610px;
     z-index: 1;
+  }
+}
+
+.navigation__list--primary {
+  @media (min-width: $desktop-width) {
+    .navigation__link {
+      color: $secondary-text;
+
+      &--current {
+        border-bottom: 2px solid $border-secondary;
+      }
+    }
   }
 }
 
@@ -128,58 +138,29 @@
   box-sizing: border-box;
 
   &:hover {
-    color: $base-text-hover;
+    opacity: 0.6;
   }
 
   &:active,
   &:focus-visible {
-    color: $base-text-pressed;
-  }
-
-  &:disabled {
-    color: $text-disabled;
-    pointer-events: none;
+    opacity: 0.4;
   }
 
   @media (min-width: $tablet-width) {
     min-width: 65px;
     max-width: 175px;
+    padding: 8px 0;
     font-size: 18px;
     line-height: 24px;
-    padding: 5px;
     border: none;
 
-    &--current::after {
-      position: absolute;
-      content: "";
-      bottom: -6px;
-      display: block;
-      width: calc(100% - 10px);
+    &--current {
       border-bottom: 2px solid $border-accent;
-      z-index: 1;
-    }
-
-    &::before {
-      border: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 65px;
-    max-width: 175px;
-    padding: 1px;
     font-size: 20px;
     line-height: 30px;
-
-    &--current::after {
-      bottom: -7px;
-      border-bottom: 2px solid $border-secondary;
-    }
-  }
-}
-
-.navigation__list--primary li a {
-  @media (min-width: $desktop-width) {
-    color: $secondary-text;
   }
 }

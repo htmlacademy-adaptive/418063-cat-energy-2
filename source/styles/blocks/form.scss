@@ -24,16 +24,21 @@
   box-sizing: border-box;
 
   .error & {
-    border: 1px solid $border-input-error;
+    border: 2px solid $border-input-error;
   }
 
   &:hover {
-    border: 1px solid $border-input-hover;
+    border-color: $border-input-hover;
   }
 
   &:active,
   &:focus-visible {
-    border: 1px solid $border-input-pressed;
+    border: 2px solid $border-input-pressed;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    pointer-events: none;
   }
 
   @media (min-width: $tablet-width) {

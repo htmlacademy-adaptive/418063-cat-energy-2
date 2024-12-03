@@ -6,7 +6,7 @@
   padding-bottom: 47px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 45px;
+    padding-top: 44px;
     padding-bottom: 63px;
   }
 
@@ -54,14 +54,14 @@
 .advantages__item {
   position: relative;
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-flow: row wrap;
   gap: 20px;
   width: 280px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 
-  &::after {
+  &::before {
     position: relative;
     top: -2px;
     display: block;
@@ -73,37 +73,37 @@
     background-repeat: no-repeat;
   }
 
-  &--nutrients::after {
+  &--nutrients::before {
     background-size: 25px 28px;
     background-image: url("../../icons/advantages/nutrients-icon.svg");
   }
 
-  &--powder::after {
+  &--powder::before {
     background-size: 26px 28px;
     background-image: url("../../icons/advantages/powder-icon.svg");
   }
 
-  &--eating::after {
+  &--eating::before {
     background-size: 25px 30px;
     background-image: url("../../icons/advantages/eating-icon.svg");
   }
 
-  &--time::after {
+  &--time::before {
     background-size: 26px 31px;
     background-image: url("../../icons/advantages/time-icon.svg");
   }
 
   @media (min-width: $tablet-width) {
     width: 245px;
-    flex-flow: column-reverse wrap;
+    flex-flow: column wrap;
     gap: 30px;
 
-    &::after {
+    &::before {
       width: 80px;
       height: 80px;
     }
 
-    &::before {
+    &::after {
       position: absolute;
       top: -65px;
       content: counter(item);
@@ -115,6 +115,7 @@
       padding-left: 115px;
       color: $bg-second;
       counter-increment: item;
+      z-index: -1;
     }
   }
 }

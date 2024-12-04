@@ -101,7 +101,7 @@
   display: grid;
   grid-template-columns: 280px;
   width: 280px;
-  padding: 13px 0 18px;
+  padding: 8px 0 19px;
   margin: 0;
   border-top: 1px solid $border-base;
   box-sizing: border-box;
@@ -133,13 +133,25 @@
 
 .additionally__link {
   display: grid;
-  width: 100%;
-  margin: 0;
-  margin-bottom: 13px;
+  padding: 5px 10px 5px 0;
+  width: 135px;
+  margin: 0 0 7px;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s ease;
+  }
+
+  &:active,
+  &:focus-visible {
+    opacity: 0.6;
+    transition: 0.3s ease;
+  }
 
   @media (min-width: $tablet-width) {
     width: 200px;
+    padding: 0;
     margin: 0;
   }
 }
@@ -249,7 +261,7 @@
   padding: 187px 0 33px;
   margin: 0;
   background-color: $bg-accent;
-  background-image: url("../../images/background/present-bg-mobile@1x.png");
+  background-image: image-set("../../images/background/present-bg-mobile@1x.png" 1x type("image/png"), "../../images/background/present-bg-mobile@2x.png" 2x type("image/png"));
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -271,7 +283,7 @@
     justify-content: flex-end;
     width: 708px;
     padding: 72px 0 59px;
-    background-image: url("../../images/background/present-bg-tablet@1x.png");
+    background-image: image-set("../../images/background/present-bg-tablet@1x.png" 1x type("image/png"), "../../images/background/present-bg-tablet@2x.png" 2x type("image/png"));
 
     &::before {
       top: 59px;
@@ -284,6 +296,7 @@
     grid-row: 2/ 3;
     width: 245px;
     padding: 72px 0 34px;
+    background-image: image-set("../../images/background/present-bg-desktop@1x.png" 1x type("image/png"), "../../images/background/present-bg-desktop@2x.png" 2x type("image/png"));
 
     &::before {
       top: 58px;

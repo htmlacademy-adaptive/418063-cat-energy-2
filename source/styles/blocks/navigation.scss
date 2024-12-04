@@ -32,6 +32,7 @@
 
     &--nojs .navigation__list {
       position: static;
+      display: block;
       min-height: 0;
     }
   }

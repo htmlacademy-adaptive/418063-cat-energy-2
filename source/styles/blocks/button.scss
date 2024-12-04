@@ -42,6 +42,7 @@
 
     &:active,
     &:focus-visible {
+      color: $base-text-pressed;
       background-color: $btn-secondary-pressed;
     }
   }

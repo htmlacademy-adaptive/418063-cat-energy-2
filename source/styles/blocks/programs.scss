@@ -195,7 +195,7 @@
 
   &::after {
     position: absolute;
-    left: 145px;
+    left: 119px;
     display: block;
     content: "";
     width: 27px;
@@ -238,6 +238,10 @@
     margin-bottom: 15px;
     font-size: 20px;
     line-height: 30px;
+
+    &::after {
+      left: 144px;
+    }
   }
 
   @media (min-width: $desktop-width) {
